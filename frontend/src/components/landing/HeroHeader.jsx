@@ -14,7 +14,7 @@ export const HeroHeader = () => {
   return (
     <section
       ref={ref}
-      className="pt-28 pb-20 lg:pt-36 lg:pb-28 bg-white"
+      className="pt-24 pb-14 lg:pt-32 lg:pb-20 bg-white"
       aria-label="Hero section"
     >
       <div
