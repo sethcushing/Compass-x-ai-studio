@@ -13,7 +13,7 @@ export const ClosingStatement = () => {
       aria-label="Closing statement"
     >
       <div className={`max-w-3xl mx-auto px-6 lg:px-8 text-center section-animate ${isInView ? 'visible' : ''}`}>
-        <Separator className="mb-16 max-w-xs mx-auto bg-orange-200" />
+        <Separator className="mb-10 max-w-xs mx-auto bg-orange-200" />
 
         <div className="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center mx-auto mb-10">
           <Zap size={22} className="text-orange-500" strokeWidth={1.5} />
