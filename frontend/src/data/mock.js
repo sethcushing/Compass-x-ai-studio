@@ -5,7 +5,13 @@ export const timelineSteps = [
     title: 'Experience Design',
     subtitle: 'Figma Make',
     description: 'User journeys and requirements defined and validated with business',
-    iconName: 'PenTool'
+    iconName: 'PenTool',
+    expandedDetails: [
+      'User journey mapping and workflow definition',
+      'Business stakeholder review sessions and sign-off',
+      'UI/UX wireframes, prototypes, and interaction design',
+      'Accessibility standards and compliance planning'
+    ]
   },
   {
     id: 'step-2',
@@ -13,47 +19,83 @@ export const timelineSteps = [
     title: 'Specification Repository',
     subtitle: 'GitHub',
     description: 'Approved specifications committed as build source',
-    iconName: 'GitBranch'
+    iconName: 'GitBranch',
+    expandedDetails: [
+      'Architecture artifacts and technical specifications',
+      'Data model and API contract definitions (OpenAPI)',
+      'Integration requirements and dependency mapping',
+      'Version-controlled requirement tracking with audit trail'
+    ]
   },
   {
     id: 'step-3',
     order: 3,
     title: 'Emergent Build Phase',
-    subtitle: null,
+    subtitle: 'Emergent',
     description: 'Emergent Builder constructs the application and integrations',
-    iconName: 'Cpu'
+    iconName: 'Cpu',
+    expandedDetails: [
+      'Agentic application construction from specifications',
+      'API development and integration wiring',
+      'Frontend component assembly and responsive layouts',
+      'Automated test generation and code quality validation'
+    ]
   },
   {
     id: 'step-4',
     order: 4,
     title: 'Validation and Hardening',
-    subtitle: null,
+    subtitle: 'QA Gate',
     description: 'Business and technical validation of functionality and data',
-    iconName: 'ShieldCheck'
+    iconName: 'ShieldCheck',
+    expandedDetails: [
+      'Functional testing against business acceptance criteria',
+      'Data integrity verification and schema validation',
+      'Performance benchmarking and load testing',
+      'Security scanning and vulnerability assessment'
+    ]
   },
   {
     id: 'step-5',
     order: 5,
     title: 'Release Repository Creation',
-    subtitle: null,
+    subtitle: 'Enterprise GitHub',
     description: 'Validated application pushed to a new GitHub repository for enterprise ownership',
-    iconName: 'Package'
+    iconName: 'Package',
+    expandedDetails: [
+      'Validated codebase pushed to enterprise-owned repository',
+      'Release notes, changelog, and migration guides generated',
+      'Dependency manifest and license compliance audit',
+      'Infrastructure-as-code templates and deployment configs'
+    ]
   },
   {
     id: 'step-6',
     order: 6,
     title: 'Enterprise CI/CD Execution',
-    subtitle: null,
+    subtitle: 'CI/CD Pipelines',
     description: 'Enterprise pipelines deploy using internal change processes',
-    iconName: 'GitPullRequest'
+    iconName: 'GitPullRequest',
+    expandedDetails: [
+      'Automated build, lint, and artifact creation',
+      'Deployment to QA and UAT environments for validation',
+      'Integration testing across enterprise systems',
+      'Change management approval gates and promotion workflows'
+    ]
   },
   {
     id: 'step-7',
     order: 7,
-    title: 'Production Environment Deployment',
-    subtitle: null,
+    title: 'Production Deployment',
+    subtitle: 'AWS App Runner',
     description: 'Application runs inside enterprise cloud with identity and data integration',
-    iconName: 'Cloud'
+    iconName: 'Cloud',
+    expandedDetails: [
+      'Blue-green deployment with zero-downtime rollout',
+      'Identity provider integration (SSO, IAM, RBAC)',
+      'Enterprise monitoring, alerting, and log aggregation',
+      'Data layer connectivity verification and health checks'
+    ]
   }
 ];
 
@@ -64,7 +106,8 @@ export const loopFlow = [
   { id: 'loop-4', order: 4, title: 'Validation', description: 'Business and technical validation', iconName: 'ShieldCheck' },
   { id: 'loop-5', order: 5, title: 'Release Repo', description: 'Enterprise repository creation', iconName: 'Package' },
   { id: 'loop-6', order: 6, title: 'Enterprise CI/CD', description: 'Pipeline execution', iconName: 'GitPullRequest' },
-  { id: 'loop-7', order: 7, title: 'Production', description: 'Enterprise cloud deployment', iconName: 'Cloud' }
+  { id: 'loop-7', order: 7, title: 'Production', description: 'Live enterprise deployment', iconName: 'Cloud' },
+  { id: 'loop-8', order: 8, title: 'Enhancement Request', description: 'Change request triggers new cycle', iconName: 'RefreshCw' }
 ];
 
 export const architectureLayers = [
@@ -74,7 +117,13 @@ export const architectureLayers = [
     title: 'Human Experience Layer',
     description: 'Figma Make designs, workflows, user logic',
     iconName: 'Monitor',
-    branches: null
+    branches: null,
+    expandedDetails: [
+      'Figma component libraries and shared design tokens',
+      'User flow diagrams and multi-step interaction patterns',
+      'Business rule specifications and validation logic',
+      'Responsive breakpoint configurations and device testing'
+    ]
   },
   {
     id: 'layer-2',
@@ -82,7 +131,13 @@ export const architectureLayers = [
     title: 'Specification Layer',
     description: 'Source GitHub repository with requirements and architecture artifacts',
     iconName: 'FileText',
-    branches: null
+    branches: null,
+    expandedDetails: [
+      'API contract definitions using OpenAPI / Swagger specs',
+      'Database schema definitions and migration scripts',
+      'Integration endpoint specifications and auth flows',
+      'Environment configuration templates and secrets management'
+    ]
   },
   {
     id: 'layer-3',
@@ -90,7 +145,13 @@ export const architectureLayers = [
     title: 'Build Layer',
     description: 'Emergent Builder runtime and agentic development',
     iconName: 'Wrench',
-    branches: null
+    branches: null,
+    expandedDetails: [
+      'AI-powered code generation from validated specifications',
+      'Real-time validation, linting, and error correction',
+      'Dependency resolution and package management',
+      'Automated documentation and inline code commentary'
+    ]
   },
   {
     id: 'layer-4',
@@ -98,7 +159,13 @@ export const architectureLayers = [
     title: 'Enterprise Delivery Layer',
     description: 'Release repository and enterprise pipelines',
     iconName: 'Send',
-    branches: null
+    branches: null,
+    expandedDetails: [
+      'Release branch management, tagging, and versioning',
+      'CI/CD pipeline configurations with multi-stage gates',
+      'Environment promotion workflows (Dev → QA → UAT → Prod)',
+      'Artifact versioning, container registry, and rollback support'
+    ]
   },
   {
     id: 'layer-5',
@@ -106,7 +173,13 @@ export const architectureLayers = [
     title: 'Identity Layer',
     description: 'SSO authentication, IAM authorization, Role-based access',
     iconName: 'KeyRound',
-    branches: null
+    branches: null,
+    expandedDetails: [
+      'SAML 2.0 and OIDC single sign-on integration',
+      'Role-based access control (RBAC) permission matrices',
+      'Service account provisioning and key rotation policies',
+      'Authentication audit logging and anomaly detection'
+    ]
   },
   {
     id: 'layer-6',
@@ -118,6 +191,12 @@ export const architectureLayers = [
       { id: 'branch-1', title: 'Static MongoDB', iconName: 'Database' },
       { id: 'branch-2', title: 'Static MCP Bridge', iconName: 'Cable' },
       { id: 'branch-3', title: 'Direct EDW Tables', iconName: 'Table2' }
+    ],
+    expandedDetails: [
+      'Connection pooling and automatic failover configuration',
+      'Data classification tagging and access governance policies',
+      'Schema versioning with backward-compatible migrations',
+      'Query performance monitoring and optimization rules'
     ]
   }
 ];
@@ -129,25 +208,89 @@ export const pipelineStages = [
   { id: 'pipeline-4', order: 4, title: 'Validation Signoff', description: 'Quality verified', iconName: 'BadgeCheck' },
   { id: 'pipeline-5', order: 5, title: 'Release Repo Created', description: 'Enterprise repository ready', iconName: 'FolderGit2' },
   { id: 'pipeline-6', order: 6, title: 'Security Checks', description: 'Security validated', iconName: 'Shield' },
-  { id: 'pipeline-7', order: 7, title: 'Enterprise Pipeline Deploy', description: 'CI/CD execution', iconName: 'Rocket' },
+  {
+    id: 'pipeline-7',
+    order: 7,
+    title: 'Enterprise Pipeline Deploy',
+    description: 'CI/CD execution across environments',
+    iconName: 'Rocket',
+    environments: ['Development', 'QA', 'UAT', 'Staging', 'Production']
+  },
   { id: 'pipeline-8', order: 8, title: 'Production Release', description: 'Live deployment', iconName: 'Flag' }
 ];
 
 export const releaseIncludes = [
-  'Version history',
-  'Approvals',
-  'Schema definitions',
-  'Role permissions',
-  'Change documentation'
+  { title: 'Version history', detail: 'Semantic versioning with full commit log and diff tracking' },
+  { title: 'Approval records', detail: 'Multi-level sign-off chains with timestamps and reviewers' },
+  { title: 'Schema definitions', detail: 'Database schemas, migration scripts, and rollback procedures' },
+  { title: 'Role permissions', detail: 'Access control matrices mapping roles to resources and actions' },
+  { title: 'Change documentation', detail: 'Impact analysis, risk assessment, and deployment runbook' },
+  { title: 'Rollback procedures', detail: 'Automated rollback scripts with health check verification' },
+  { title: 'Compliance reports', detail: 'Dependency audit, license compliance, and security scan results' }
 ];
 
 export const governanceData = {
   approvalStates: [
-    { label: 'New', status: 'initial' },
-    { label: 'Pending Approval', status: 'pending' },
-    { label: 'In Progress', status: 'active' },
-    { label: 'Validation', status: 'active' },
-    { label: 'Released', status: 'complete' }
+    {
+      label: 'New',
+      status: 'initial',
+      description: 'Initial request submitted for review',
+      requirements: [
+        'Business justification document',
+        'Scope definition and impact assessment',
+        'Resource and timeline estimate',
+        'Technical feasibility review'
+      ],
+      owner: 'Requestor / Business Analyst'
+    },
+    {
+      label: 'Pending Approval',
+      status: 'pending',
+      description: 'Request awaiting stakeholder review and authorization',
+      requirements: [
+        'Business owner sign-off',
+        'Technical owner review',
+        'Architecture review if applicable',
+        'Security assessment when required'
+      ],
+      owner: 'Approval Committee'
+    },
+    {
+      label: 'In Progress',
+      status: 'active',
+      description: 'Active development and build phase underway',
+      requirements: [
+        'Assigned development resources',
+        'Sprint planning and backlog grooming',
+        'Regular status reporting to stakeholders',
+        'Continuous integration verification'
+      ],
+      owner: 'Development Team Lead'
+    },
+    {
+      label: 'Validation',
+      status: 'active',
+      description: 'Quality assurance and stakeholder acceptance testing',
+      requirements: [
+        'Functional test results documented',
+        'Performance benchmarks met or exceeded',
+        'Security scan passed with no critical findings',
+        'Business acceptance criteria verified'
+      ],
+      owner: 'QA Lead / Business Owner'
+    },
+    {
+      label: 'Released',
+      status: 'complete',
+      description: 'Application deployed to production and operational',
+      requirements: [
+        'Production deployment verified and healthy',
+        'Monitoring dashboards active and alerting',
+        'Rollback plan documented and tested',
+        'Post-deployment review completed'
+      ],
+      owner: 'Release Manager'
+    }
   ],
   reviewers: [
     'Business owner',
