@@ -74,9 +74,10 @@ export const GovernanceModel = () => {
 
               {/* Approval lifecycle states - clickable */}
               <div className="mb-6">
-                <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-orange-500 mb-3">
+                <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-orange-500 mb-1.5">
                   Approval Lifecycle States
                 </h4>
+                <p className="text-xs text-slate-400 mb-3">Select a state to view its requirements</p>
                 <div className="flex flex-wrap gap-2">
                   {governanceData.approvalStates.map((state) => (
                     <Badge
@@ -85,9 +86,7 @@ export const GovernanceModel = () => {
                       className={`px-3 py-1.5 text-xs font-medium rounded-full cursor-pointer ${
                         selectedState === state.label
                           ? 'bg-orange-500 text-white border-orange-500'
-                          : state.status === 'active'
-                            ? 'bg-orange-50 text-orange-600 border-orange-200 hover:bg-orange-100'
-                            : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                          : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                       }`}
                       style={{ transition: 'all 0.2s ease' }}
                       onClick={() => toggleState(state.label)}
