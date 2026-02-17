@@ -42,7 +42,7 @@ const StateDetailPanel = ({ state }) => {
 
 export const GovernanceModel = () => {
   const [ref, isInView] = useInView();
-  const [selectedState, setSelectedState] = useState(null);
+  const [selectedState, setSelectedState] = useState('New');
 
   const activeState = governanceData.approvalStates.find(s => s.label === selectedState);
 
