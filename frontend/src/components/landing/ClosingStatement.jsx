@@ -9,7 +9,7 @@ export const ClosingStatement = () => {
   return (
     <section
       ref={ref}
-      className="py-24 lg:py-32 bg-white"
+      className="py-16 lg:py-24 bg-white"
       aria-label="Closing statement"
     >
       <div className={`max-w-3xl mx-auto px-6 lg:px-8 text-center section-animate ${isInView ? 'visible' : ''}`}>
