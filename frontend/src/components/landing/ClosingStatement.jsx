@@ -30,7 +30,7 @@ export const ClosingStatement = () => {
           standards.
         </p>
 
-        <Separator className="mt-16 max-w-xs mx-auto bg-orange-200" />
+        <Separator className="mt-10 max-w-xs mx-auto bg-orange-200" />
       </div>
     </section>
   );
