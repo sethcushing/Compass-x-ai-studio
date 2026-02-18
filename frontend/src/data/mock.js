@@ -330,3 +330,131 @@ export const guardrailsData = {
     ]
   }
 };
+
+
+export const deliveryTeamData = {
+  title: 'Developing and Managing Data Products',
+  description: 'Data Products require a designated product manager who oversees a team of experts to build, support, and improve the data product over time. Both the manager and the data product team should sit within a business team and leverage an organization COE that determines standards and best practices for developing data products.',
+  note: 'This diagram represents all roles at full maturity for a large data product. Four roles are required, but may be part time, can be combined, and may not be necessary for getting started and for small data products.',
+  categories: {
+    functional: {
+      title: 'Functional Roles',
+      description: 'Translating strategic objectives into practical, data-driven decisions and procedures, while managing the day-to-day operation of data projects'
+    },
+    business: {
+      title: 'Business Roles',
+      description: 'Shape data strategies, defining project goals, and ensuring alignment with customer and business requirements'
+    },
+    technical: {
+      title: 'Technical Roles',
+      description: 'Build underlying technologies and infrastructure needed to support data product objectives'
+    }
+  },
+  roles: [
+    {
+      id: 'role-1',
+      order: 1,
+      title: 'Data Architect',
+      category: 'functional',
+      iconName: 'Database',
+      combinable: true,
+      responsibilities: [
+        'Integrated Data Sources and those with common ETL Patterns or canonical features need to be architected together',
+        'Value and Feedback often integrate Profile and Transaction Data and may require an architect'
+      ],
+      subRoles: [
+        {
+          title: 'Lead Data Engineer',
+          items: [
+            'Transactional, Event and Batch ETL Expertise',
+            'Connects Product Management to Technical Management'
+          ]
+        },
+        {
+          title: 'Tech Lead',
+          items: [
+            'Enables Day to Day Technical Management to be separated from Product Management',
+            'Connects Architecture to Engineering'
+          ]
+        }
+      ]
+    },
+    {
+      id: 'role-2',
+      order: 2,
+      title: 'Data Engineers',
+      category: 'technical',
+      iconName: 'Wrench',
+      combinable: true,
+      responsibilities: [
+        'Builds data pipelines for various data ingestion patterns',
+        'Ensures data quality and availability to Technical Management'
+      ],
+      subRoles: [
+        {
+          title: 'Visualization Engineer',
+          items: [
+            'Builds reports to answer specific questions',
+            'Supports ad-hoc analytics and one-time data pulls'
+          ]
+        }
+      ]
+    },
+    {
+      id: 'role-3',
+      order: 3,
+      title: 'Product Manager',
+      category: 'business',
+      iconName: 'User',
+      combinable: false,
+      responsibilities: [
+        'Focuses on quarterly / yearly value delivery',
+        'Connects Product Management to Vision',
+        'Connects Product Management to Advanced Analytics'
+      ],
+      subRoles: [
+        {
+          title: 'Product Owner / Feature Managers',
+          items: [
+            'Primary customer advocate and link between business and technology strategy',
+            'Builds and maintains the team backlog and coordinates dependencies with stakeholders',
+            'Ensures user stories meet acceptance criteria'
+          ]
+        }
+      ]
+    },
+    {
+      id: 'role-4',
+      order: 4,
+      title: 'Scrum Master',
+      category: 'business',
+      iconName: 'RefreshCw',
+      combinable: false,
+      responsibilities: [
+        'Focuses on delivering value every iteration',
+        'Connects Product and Technical Management'
+      ],
+      subRoles: [
+        {
+          title: 'Business Analyst',
+          items: [
+            'Performs process modeling, requirements gathering, and cost/benefit analysis'
+          ]
+        },
+        {
+          title: 'Platform & Reliability Engineers',
+          items: [
+            'Ensures data platforms are accessible to data product teams',
+            'Ensures production systems are free from errors'
+          ]
+        },
+        {
+          title: 'Data Analyst',
+          items: [
+            'Performs data mining, data cleansing, data interpretation, and data visualization tasks'
+          ]
+        }
+      ]
+    }
+  ]
+};
