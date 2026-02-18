@@ -343,6 +343,13 @@ export const deliveryTeamData = {
       description: 'Translating strategic objectives into practical, data-driven decisions and procedures, while managing the day-to-day operation of data projects',
       roles: [
         {
+          title: 'Engagement Lead',
+          items: [
+            'Primary point of contact between the delivery team and client stakeholders',
+            'Oversees project scope, timelines, and resource allocation across workstreams'
+          ]
+        },
+        {
           title: 'Data Architect',
           items: [
             'Integrated Data Sources and those with common ETL Patterns or canonical features need to be architected together',
