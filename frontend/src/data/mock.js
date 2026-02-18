@@ -375,7 +375,7 @@ export const deliveryTeamData = {
     {
       id: 'business',
       title: 'Business Roles',
-      description: 'Shape data strategies, defining project goals, and ensuring alignment with customer and business requirements',
+      description: 'Shape AI strategies, defining project goals, and ensuring alignment with customer and business requirements',
       roles: [
         {
           title: 'Product Manager',
@@ -411,7 +411,7 @@ export const deliveryTeamData = {
     {
       id: 'technical',
       title: 'Technical Roles',
-      description: 'Build underlying technologies and infrastructure needed to support data product objectives',
+      description: 'Build underlying technologies and infrastructure needed to support AI product objectives',
       roles: [
         {
           title: 'Data Engineers',

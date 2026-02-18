@@ -126,7 +126,7 @@ export const DeliveryTeam = () => {
             <div className="h-[1px] w-16 bg-slate-200" />
           </div>
           <p className="text-sm text-slate-500 font-medium">
-            Together, these roles converge to form the data product delivery team
+            Together, these roles converge to form the AI product delivery team
           </p>
           <p className="text-xs text-slate-400 italic mt-2 max-w-xl mx-auto">
             {deliveryTeamData.note}
