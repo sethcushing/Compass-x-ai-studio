@@ -107,11 +107,11 @@ export const DeliveryFlow = () => {
                       <div className="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center mb-2.5 mx-auto">
                         {IconComponent && <IconComponent size={18} className="text-slate-600" strokeWidth={1.5} />}
                       </div>
-                      <h3 className="text-[13px] font-semibold text-slate-900 mb-0.5 leading-tight">{step.title}</h3>
+                      <h3 className="text-sm font-semibold text-slate-900 mb-0.5 leading-tight">{step.title}</h3>
                       {step.subtitle && (
                         <span className="text-[10px] font-mono text-sky-500 uppercase tracking-widest block mb-1.5">{step.subtitle}</span>
                       )}
-                      <p className="text-xs text-slate-500 leading-relaxed">{step.description}</p>
+                      <p className="text-sm text-slate-500 leading-relaxed">{step.description}</p>
                       <ChevronDown
                         size={14}
                         className={`mx-auto mt-2 text-slate-300 ${selectedStep === step.id ? 'rotate-180 text-sky-400' : ''}`}
