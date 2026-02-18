@@ -1,0 +1,35 @@
+# Dependencies
+frontend/node_modules
+backend/__pycache__
+backend/*.pyc
+
+# Build output
+frontend/build
+
+# Dev files
+.git
+.gitignore
+*.md
+!README.md
+tests/
+test_reports/
+test_result.md
+memory/
+
+# Environment files (pass via docker --env-file or compose)
+backend/.env
+frontend/.env
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/var/
