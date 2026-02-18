@@ -69,7 +69,7 @@ export const GovernanceModel = () => {
                 <div className="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center">
                   <ClipboardCheck size={20} className="text-sky-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900">Governance</h3>
+                <h3 className="text-xl font-bold text-slate-900">Governance</h3>
               </div>
 
               {/* Approval lifecycle states - clickable */}
@@ -141,7 +141,7 @@ export const GovernanceModel = () => {
                 <div className="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center">
                   <ShieldAlert size={20} className="text-sky-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900">Guardrails</h3>
+                <h3 className="text-xl font-bold text-slate-900">Guardrails</h3>
               </div>
 
               {Object.values(guardrailsData).map((section, sectionIndex) => {
