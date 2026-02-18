@@ -34,7 +34,7 @@ const DetailPanel = ({ step }) => {
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-3 mb-1">
-              <h3 className="text-base font-bold text-slate-900">{step.title}</h3>
+              <h3 className="text-lg font-bold text-slate-900">{step.title}</h3>
               {step.subtitle && (
                 <span className="text-[11px] font-mono text-sky-500 uppercase tracking-widest bg-sky-50 px-2 py-0.5 rounded">
                   {step.subtitle}

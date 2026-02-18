@@ -15,7 +15,7 @@ const LoopNode = ({ step, size = 'default' }) => {
           <IconComponent size={isCompact ? 16 : 20} className="text-sky-500" strokeWidth={1.5} />
         )}
       </div>
-      <span className={`${isCompact ? 'text-[10px]' : 'text-xs'} font-semibold text-slate-700 leading-tight`}>
+      <span className={`${isCompact ? 'text-[11px]' : 'text-sm'} font-semibold text-slate-700 leading-tight`}>
         {step.title}
       </span>
     </div>
