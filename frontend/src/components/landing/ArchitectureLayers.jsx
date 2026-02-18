@@ -12,7 +12,7 @@ export const ArchitectureLayers = () => {
     <section id="architecture" ref={ref} className="py-14 lg:py-20 bg-slate-50/60" aria-label="Architecture layers">
       <div className={`max-w-4xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-orange-500 mb-2 block">Architecture</span>
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Architecture</span>
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Architecture Layers</h2>
           <p className="text-base text-slate-500 max-w-2xl">
             Stacked layers from experience to data — click any layer to explore
@@ -30,10 +30,10 @@ export const ArchitectureLayers = () => {
                 className="border-0"
               >
                 <div className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md overflow-hidden" style={{ transition: 'box-shadow 0.3s ease' }}>
-                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&[data-state=open]]:bg-orange-50/40">
+                  <AccordionTrigger className="px-6 py-5 hover:no-underline [&[data-state=open]]:bg-sky-50/40">
                     <div className="flex items-center gap-4 flex-1 text-left">
                       {/* Left orange accent */}
-                      <div className="w-1 h-10 bg-orange-400 rounded-full shrink-0" />
+                      <div className="w-1 h-10 bg-sky-400 rounded-full shrink-0" />
 
                       {/* Layer number */}
                       <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
@@ -43,8 +43,8 @@ export const ArchitectureLayers = () => {
                       </div>
 
                       {/* Icon */}
-                      <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center shrink-0">
-                        {IconComponent && <IconComponent size={20} className="text-orange-500" strokeWidth={1.5} />}
+                      <div className="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center shrink-0">
+                        {IconComponent && <IconComponent size={20} className="text-sky-500" strokeWidth={1.5} />}
                       </div>
 
                       {/* Title and description */}
@@ -63,7 +63,7 @@ export const ArchitectureLayers = () => {
                       <ul className="space-y-2.5 mb-4">
                         {layer.expandedDetails.map((detail, i) => (
                           <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
-                            <div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-[7px] shrink-0" />
+                            <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-[7px] shrink-0" />
                             {detail}
                           </li>
                         ))}
@@ -80,7 +80,7 @@ export const ArchitectureLayers = () => {
                                 className="flex items-center gap-2 bg-slate-50 rounded-lg px-4 py-2.5 border border-slate-200"
                                 role="listitem"
                               >
-                                {BranchIcon && <BranchIcon size={14} className="text-orange-500" strokeWidth={1.5} />}
+                                {BranchIcon && <BranchIcon size={14} className="text-sky-500" strokeWidth={1.5} />}
                                 <span className="text-xs font-mono font-medium text-slate-700">{branch.title}</span>
                               </div>
                             );

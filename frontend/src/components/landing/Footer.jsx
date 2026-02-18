@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-orange-500 flex items-center justify-center">
+            <div className="w-6 h-6 rounded-md bg-sky-500 flex items-center justify-center">
               <span className="text-white text-[8px] font-bold font-mono">CX</span>
             </div>
             <span className="text-sm font-bold text-slate-900 tracking-tight">

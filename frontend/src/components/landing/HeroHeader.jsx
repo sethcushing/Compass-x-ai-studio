@@ -23,14 +23,14 @@ export const HeroHeader = () => {
         }`}
       >
         <div className="mb-6">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-orange-500">
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500">
             Enterprise Architecture
           </span>
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-slate-900 leading-[1.1] mb-8 max-w-4xl">
           Emergent Builder within your{' '}
-          <span className="text-orange-500">enterprise ecosystem</span>
+          <span className="text-sky-500">enterprise ecosystem</span>
         </h1>
 
         <p className="text-lg lg:text-xl text-slate-500 leading-relaxed mb-12 max-w-3xl">
@@ -45,7 +45,7 @@ export const HeroHeader = () => {
             <Badge
               key={tag.id}
               variant="outline"
-              className="px-5 py-2.5 rounded-full text-sm font-medium bg-orange-50 text-orange-600 border-orange-200 hover:bg-orange-100"
+              className="px-5 py-2.5 rounded-full text-sm font-medium bg-sky-50 text-sky-600 border-sky-200 hover:bg-sky-100"
               style={{ transition: 'background-color 0.2s ease' }}
               role="listitem"
             >

@@ -9,8 +9,8 @@ const StepCircle = ({ step, isSelected, onClick }) => (
   <div
     className={`w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold font-mono z-10 relative shadow-sm cursor-pointer ${
       isSelected
-        ? 'bg-orange-600 text-white ring-4 ring-orange-100'
-        : 'bg-orange-500 text-white hover:bg-orange-600'
+        ? 'bg-sky-600 text-white ring-4 ring-sky-100'
+        : 'bg-sky-500 text-white hover:bg-sky-600'
     }`}
     style={{ transition: 'background-color 0.2s ease, box-shadow 0.2s ease' }}
     onClick={onClick}
@@ -26,17 +26,17 @@ const StepCircle = ({ step, isSelected, onClick }) => (
 const DetailPanel = ({ step }) => {
   const IconComponent = getIcon(step.iconName);
   return (
-    <div className="animate-slide-down mt-6 bg-white rounded-xl border border-orange-100 shadow-sm overflow-hidden">
+    <div className="animate-slide-down mt-6 bg-white rounded-xl border border-sky-100 shadow-sm overflow-hidden">
       <div className="p-6">
         <div className="flex items-start gap-4">
-          <div className="w-11 h-11 rounded-lg bg-orange-50 flex items-center justify-center shrink-0">
-            {IconComponent && <IconComponent size={22} className="text-orange-500" strokeWidth={1.5} />}
+          <div className="w-11 h-11 rounded-lg bg-sky-50 flex items-center justify-center shrink-0">
+            {IconComponent && <IconComponent size={22} className="text-sky-500" strokeWidth={1.5} />}
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-3 mb-1">
               <h3 className="text-base font-bold text-slate-900">{step.title}</h3>
               {step.subtitle && (
-                <span className="text-[11px] font-mono text-orange-500 uppercase tracking-widest bg-orange-50 px-2 py-0.5 rounded">
+                <span className="text-[11px] font-mono text-sky-500 uppercase tracking-widest bg-sky-50 px-2 py-0.5 rounded">
                   {step.subtitle}
                 </span>
               )}
@@ -45,7 +45,7 @@ const DetailPanel = ({ step }) => {
             <ul className="space-y-2.5">
               {step.expandedDetails.map((detail, i) => (
                 <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
-                  <div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-[7px] shrink-0" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-[7px] shrink-0" />
                   {detail}
                 </li>
               ))}
@@ -71,7 +71,7 @@ export const DeliveryFlow = () => {
     <section id="delivery" ref={ref} className="py-14 lg:py-20 bg-slate-50/60" aria-label="Delivery walkthrough">
       <div className={`max-w-7xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-orange-500 mb-2 block">Process</span>
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Process</span>
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Delivery Walkthrough</h2>
           <p className="text-base text-slate-500 max-w-2xl">
             From design to production — click any step to explore details
@@ -98,7 +98,7 @@ export const DeliveryFlow = () => {
                 <div key={step.id} role="listitem">
                   <Card
                     className={`border-slate-100 shadow-sm bg-white h-full cursor-pointer ${
-                      selectedStep === step.id ? 'ring-2 ring-orange-200 border-orange-200' : 'hover:shadow-md'
+                      selectedStep === step.id ? 'ring-2 ring-sky-200 border-sky-200' : 'hover:shadow-md'
                     }`}
                     style={{ transition: 'box-shadow 0.2s ease, border-color 0.2s ease' }}
                     onClick={() => toggleStep(step.id)}
@@ -109,12 +109,12 @@ export const DeliveryFlow = () => {
                       </div>
                       <h3 className="text-[13px] font-semibold text-slate-900 mb-0.5 leading-tight">{step.title}</h3>
                       {step.subtitle && (
-                        <span className="text-[10px] font-mono text-orange-500 uppercase tracking-widest block mb-1.5">{step.subtitle}</span>
+                        <span className="text-[10px] font-mono text-sky-500 uppercase tracking-widest block mb-1.5">{step.subtitle}</span>
                       )}
                       <p className="text-xs text-slate-500 leading-relaxed">{step.description}</p>
                       <ChevronDown
                         size={14}
-                        className={`mx-auto mt-2 text-slate-300 ${selectedStep === step.id ? 'rotate-180 text-orange-400' : ''}`}
+                        className={`mx-auto mt-2 text-slate-300 ${selectedStep === step.id ? 'rotate-180 text-sky-400' : ''}`}
                         style={{ transition: 'transform 0.2s ease, color 0.2s ease' }}
                       />
                     </CardContent>
@@ -137,7 +137,7 @@ export const DeliveryFlow = () => {
                 <div className="flex flex-col items-center">
                   <div
                     className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold font-mono shrink-0 shadow-sm cursor-pointer ${
-                      isExpanded ? 'bg-orange-600 text-white ring-4 ring-orange-100' : 'bg-orange-500 text-white'
+                      isExpanded ? 'bg-sky-600 text-white ring-4 ring-sky-100' : 'bg-sky-500 text-white'
                     }`}
                     onClick={() => toggleStep(step.id)}
                     role="button"
@@ -153,7 +153,7 @@ export const DeliveryFlow = () => {
                 <div className="flex-1 mb-3">
                   <Card
                     className={`border-slate-100 shadow-sm bg-white cursor-pointer ${
-                      isExpanded ? 'ring-2 ring-orange-200 border-orange-200' : ''
+                      isExpanded ? 'ring-2 ring-sky-200 border-sky-200' : ''
                     }`}
                     onClick={() => toggleStep(step.id)}
                   >
@@ -165,13 +165,13 @@ export const DeliveryFlow = () => {
                         <div className="flex-1">
                           <h3 className="text-sm font-semibold text-slate-900 mb-0.5">{step.title}</h3>
                           {step.subtitle && (
-                            <span className="text-[10px] font-mono text-orange-500 uppercase tracking-widest">{step.subtitle}</span>
+                            <span className="text-[10px] font-mono text-sky-500 uppercase tracking-widest">{step.subtitle}</span>
                           )}
                           <p className="text-xs text-slate-500 mt-1">{step.description}</p>
                         </div>
                         <ChevronDown
                           size={14}
-                          className={`shrink-0 text-slate-300 mt-1 ${isExpanded ? 'rotate-180 text-orange-400' : ''}`}
+                          className={`shrink-0 text-slate-300 mt-1 ${isExpanded ? 'rotate-180 text-sky-400' : ''}`}
                           style={{ transition: 'transform 0.2s ease' }}
                         />
                       </div>
@@ -180,7 +180,7 @@ export const DeliveryFlow = () => {
                           <ul className="space-y-2">
                             {step.expandedDetails.map((detail, i) => (
                               <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
-                                <div className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-[5px] shrink-0" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-[5px] shrink-0" />
                                 {detail}
                               </li>
                             ))}
