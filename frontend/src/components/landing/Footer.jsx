@@ -9,10 +9,10 @@ export const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-md bg-orange-500 flex items-center justify-center">
-              <span className="text-white text-[10px] font-bold font-mono">E</span>
+              <span className="text-white text-[8px] font-bold font-mono">CX</span>
             </div>
             <span className="text-sm font-bold text-slate-900 tracking-tight">
-              emergent
+              Compass X <span className="font-normal text-slate-500">AI Studio</span>
             </span>
           </div>
           <span className="text-xs text-slate-400 font-mono">
