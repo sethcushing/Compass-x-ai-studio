@@ -35,7 +35,7 @@ export const EnhancementLifecycle = () => {
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">
             Lifecycle
           </span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">
             Enhancements follow the same governed path
           </h2>
         </div>

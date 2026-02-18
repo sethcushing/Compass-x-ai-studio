@@ -13,8 +13,8 @@ export const ArchitectureLayers = () => {
       <div className={`max-w-4xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Architecture</span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Architecture Layers</h2>
-          <p className="text-base text-slate-500 max-w-2xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">Architecture Layers</h2>
+          <p className="text-lg text-slate-500 max-w-2xl">
             Stacked layers from experience to data — click any layer to explore
           </p>
         </div>

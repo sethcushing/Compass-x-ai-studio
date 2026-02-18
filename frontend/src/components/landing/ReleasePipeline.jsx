@@ -14,8 +14,8 @@ export const ReleasePipeline = () => {
       <div className={`max-w-6xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Pipeline</span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Release Pipeline</h2>
-          <p className="text-base text-slate-500 max-w-2xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">Release Pipeline</h2>
+          <p className="text-lg text-slate-500 max-w-2xl">
             Enterprise-governed stages from design approval to production release
           </p>
         </div>

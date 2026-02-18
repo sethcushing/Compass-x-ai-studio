@@ -72,8 +72,8 @@ export const DeliveryFlow = () => {
       <div className={`max-w-7xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
           <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Process</span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Delivery Walkthrough</h2>
-          <p className="text-base text-slate-500 max-w-2xl">
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">Delivery Walkthrough</h2>
+          <p className="text-lg text-slate-500 max-w-2xl">
             From design to production — click any step to explore details
           </p>
         </div>
