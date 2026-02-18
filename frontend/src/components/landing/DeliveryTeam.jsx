@@ -5,9 +5,9 @@ import { Card, CardContent } from '../ui/card';
 import { Settings, Briefcase, Code2, ChevronRight } from 'lucide-react';
 
 const categoryMeta = {
-  functional: { icon: Settings, accent: 'bg-sky-600', accentLight: 'bg-sky-50', accentText: 'text-sky-600', accentBorder: 'border-sky-200', dot: 'bg-sky-500' },
-  business: { icon: Briefcase, accent: 'bg-sky-500', accentLight: 'bg-sky-50/70', accentText: 'text-sky-500', accentBorder: 'border-sky-100', dot: 'bg-sky-400' },
-  technical: { icon: Code2, accent: 'bg-cyan-500', accentLight: 'bg-cyan-50', accentText: 'text-cyan-600', accentBorder: 'border-cyan-200', dot: 'bg-cyan-500' }
+  functional: { icon: Settings, accent: 'bg-sky-500', accentLight: 'bg-sky-50', accentText: 'text-sky-500', accentBorder: 'border-sky-200', dot: 'bg-sky-400' },
+  business: { icon: Briefcase, accent: 'bg-sky-500', accentLight: 'bg-sky-50', accentText: 'text-sky-500', accentBorder: 'border-sky-200', dot: 'bg-sky-400' },
+  technical: { icon: Code2, accent: 'bg-sky-500', accentLight: 'bg-sky-50', accentText: 'text-sky-500', accentBorder: 'border-sky-200', dot: 'bg-sky-400' }
 };
 
 const RoleItem = ({ role, meta, isOpen, onToggle }) => (
