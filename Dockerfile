@@ -7,8 +7,9 @@
 FROM node:20-alpine AS frontend-build
 WORKDIR /build
 
-COPY frontend/package.json frontend/yarn.lock ./
-RUN yarn install --frozen-lockfile --production=false
+COPY frontend/package.json ./
+COPY frontend/yarn.loc[k] ./
+RUN yarn install --production=false
 
 COPY frontend/ .
 
