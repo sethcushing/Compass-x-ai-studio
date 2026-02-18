@@ -35,7 +35,7 @@ export const ReleasePipeline = () => {
                       >
                         {IconComponent && <IconComponent size={20} className="text-sky-500" strokeWidth={1.5} />}
                       </div>
-                      <span className="text-[11px] font-semibold text-slate-700 max-w-[90px] leading-tight">
+                      <span className="text-xs font-semibold text-slate-700 max-w-[90px] leading-tight">
                         {stage.title}
                       </span>
                       {/* Environment badges for CI/CD stage */}
@@ -115,7 +115,7 @@ export const ReleasePipeline = () => {
                   <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-[7px] shrink-0" />
                   <div>
                     <span className="text-sm font-semibold text-slate-800">{item.title}</span>
-                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{item.detail}</p>
+                    <p className="text-sm text-slate-500 mt-0.5 leading-relaxed">{item.detail}</p>
                   </div>
                 </div>
               ))}
