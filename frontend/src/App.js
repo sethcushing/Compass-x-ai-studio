@@ -22,6 +22,7 @@ function App() {
         <ArchitectureLayers />
         <ReleasePipeline />
         <GovernanceModel />
+        <DeliveryTeam />
         <ClosingStatement />
       </main>
       <Footer />
