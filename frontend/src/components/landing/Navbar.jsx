@@ -32,10 +32,10 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2" aria-label="Emergent home">
             <div className="w-7 h-7 rounded-md bg-orange-500 flex items-center justify-center">
-              <span className="text-white text-xs font-bold font-mono">E</span>
+              <span className="text-white text-[9px] font-bold font-mono">CX</span>
             </div>
             <span className="text-lg font-bold text-slate-900 tracking-tight font-sans">
-              emergent
+              Compass X <span className="font-normal text-slate-500">AI Studio</span>
             </span>
           </a>
 
