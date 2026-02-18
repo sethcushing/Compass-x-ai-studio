@@ -7,10 +7,11 @@
 FROM node:20-alpine AS frontend-build
 WORKDIR /build
 
+# Copy package manifest (yarn.lock may not exist in repo)
 COPY frontend/package.json ./
-COPY frontend/yarn.loc[k] ./
 RUN yarn install --production=false
 
+# Copy source and build
 COPY frontend/ .
 
 # Build arg for backend URL at build time
