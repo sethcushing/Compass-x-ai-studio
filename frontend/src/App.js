@@ -7,6 +7,7 @@ import { EnhancementLifecycle } from "./components/landing/EnhancementLifecycle"
 import { ArchitectureLayers } from "./components/landing/ArchitectureLayers";
 import { ReleasePipeline } from "./components/landing/ReleasePipeline";
 import { GovernanceModel } from "./components/landing/GovernanceModel";
+import { DeliveryTeam } from "./components/landing/DeliveryTeam";
 import { ClosingStatement } from "./components/landing/ClosingStatement";
 import { Footer } from "./components/landing/Footer";
 
