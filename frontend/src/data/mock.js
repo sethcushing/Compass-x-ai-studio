@@ -333,14 +333,14 @@ export const guardrailsData = {
 
 
 export const deliveryTeamData = {
-  title: 'Developing and Managing Data Products',
-  description: 'Data Products require a designated product manager who oversees a team of experts to build, support, and improve the data product over time. Both the manager and the data product team should sit within a business team and leverage an organization COE that determines standards and best practices for developing data products.',
-  note: 'This diagram represents all roles at full maturity for a large data product. Four roles are required, but may be part time, can be combined, and may not be necessary for getting started and for small data products.',
+  title: 'Developing and Managing AI Products',
+  description: 'AI Products require a designated product manager who oversees a team of experts to build, support, and improve the AI product over time. Both the manager and the AI product team should sit within a business team and leverage an organization COE that determines standards and best practices for developing AI products.',
+  note: 'This diagram represents all roles at full maturity for a large AI product. Four roles are required, but may be part time, can be combined, and may not be necessary for getting started and for small AI products.',
   categories: [
     {
       id: 'functional',
       title: 'Functional Roles',
-      description: 'Translating strategic objectives into practical, data-driven decisions and procedures, while managing the day-to-day operation of data projects',
+      description: 'Translating strategic objectives into practical, AI-driven decisions and managing day-to-day operations',
       roles: [
         {
           title: 'Engagement Lead',
