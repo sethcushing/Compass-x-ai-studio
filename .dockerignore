@@ -9,12 +9,11 @@ frontend/build
 # Dev files
 .git
 .gitignore
-*.md
-!README.md
 tests/
 test_reports/
 test_result.md
 memory/
+contracts.md
 
 # Environment files (pass via docker --env-file or compose)
 backend/.env
