@@ -106,9 +106,9 @@ export const DeliveryTeam = () => {
 
         {/* Converging visual header */}
         <div className="flex items-end justify-center gap-0 mb-1 px-4" aria-hidden="true">
-          <div className="h-[3px] flex-1 max-w-[200px] bg-sky-600 rounded-l-full" />
+          <div className="h-[3px] flex-1 max-w-[200px] bg-sky-500 rounded-l-full" />
           <div className="h-[3px] flex-1 max-w-[200px] bg-sky-500" />
-          <div className="h-[3px] flex-1 max-w-[200px] bg-cyan-500 rounded-r-full" />
+          <div className="h-[3px] flex-1 max-w-[200px] bg-sky-500 rounded-r-full" />
         </div>
 
         {/* Three-column layout */}
