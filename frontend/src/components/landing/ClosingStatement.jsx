@@ -19,13 +19,13 @@ export const ClosingStatement = () => {
           <Zap size={22} className="text-sky-500" strokeWidth={1.5} />
         </div>
 
-        <p className="text-xl lg:text-2xl text-slate-600 leading-relaxed mb-4">
+        <p className="text-2xl lg:text-3xl text-slate-600 leading-relaxed mb-4">
           Emergent Builder accelerates application delivery while preserving
           enterprise ownership of infrastructure, identity, data, and release
           governance.
         </p>
 
-        <p className="text-xl lg:text-2xl text-slate-900 leading-relaxed font-semibold">
+        <p className="text-2xl lg:text-3xl text-slate-900 leading-relaxed font-semibold">
           The result is faster innovation without compromising architectural
           standards.
         </p>
