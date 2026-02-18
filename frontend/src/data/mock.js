@@ -430,7 +430,7 @@ export const deliveryTeamData = {
         {
           title: 'Platform & Reliability Engineers',
           items: [
-            'Ensures data platforms are accessible to data product teams',
+            'Ensures data platforms are accessible to AI product teams',
             'Ensures production systems are free from errors'
           ]
         },
