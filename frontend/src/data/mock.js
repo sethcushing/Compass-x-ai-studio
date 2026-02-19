@@ -30,9 +30,9 @@ export const timelineSteps = [
   {
     id: 'step-3',
     order: 3,
-    title: 'Emergent Build Phase',
-    subtitle: 'Emergent',
-    description: 'Emergent Builder constructs the application and integrations',
+    title: 'Compass AI Studio Build Phase',
+    subtitle: 'Compass AI Studio',
+    description: 'Compass AI Studio powered by Emergent constructs the application and integrations',
     iconName: 'Cpu',
     expandedDetails: [
       'Agentic application construction from specifications',
@@ -102,7 +102,7 @@ export const timelineSteps = [
 export const loopFlow = [
   { id: 'loop-1', order: 1, title: 'Design', description: 'Experience design and requirements', iconName: 'PenTool' },
   { id: 'loop-2', order: 2, title: 'Spec Repo', description: 'Specification repository updated', iconName: 'GitBranch' },
-  { id: 'loop-3', order: 3, title: 'Emergent Build', description: 'Agentic application construction', iconName: 'Cpu' },
+  { id: 'loop-3', order: 3, title: 'Compass AI Studio Build', description: 'Agentic application construction', iconName: 'Cpu' },
   { id: 'loop-4', order: 4, title: 'Validation', description: 'Business and technical validation', iconName: 'ShieldCheck' },
   { id: 'loop-5', order: 5, title: 'Release Repo', description: 'Enterprise repository creation', iconName: 'Package' },
   { id: 'loop-6', order: 6, title: 'Enterprise CI/CD', description: 'Pipeline execution', iconName: 'GitPullRequest' },
@@ -143,7 +143,7 @@ export const architectureLayers = [
     id: 'layer-3',
     order: 3,
     title: 'Build Layer',
-    description: 'Emergent Builder runtime and agentic development',
+    description: 'Compass AI Studio powered by Emergent runtime and agentic development',
     iconName: 'Wrench',
     branches: null,
     expandedDetails: [
@@ -204,7 +204,7 @@ export const architectureLayers = [
 export const pipelineStages = [
   { id: 'pipeline-1', order: 1, title: 'Design Approved', description: 'Business design validated', iconName: 'CheckCircle' },
   { id: 'pipeline-2', order: 2, title: 'Spec Repo Updated', description: 'Specifications committed', iconName: 'RefreshCw' },
-  { id: 'pipeline-3', order: 3, title: 'Emergent Build', description: 'Application constructed', iconName: 'Cpu' },
+  { id: 'pipeline-3', order: 3, title: 'Compass AI Studio Build', description: 'Application constructed', iconName: 'Cpu' },
   { id: 'pipeline-4', order: 4, title: 'Validation Signoff', description: 'Quality verified', iconName: 'BadgeCheck' },
   { id: 'pipeline-5', order: 5, title: 'Release Repo Created', description: 'Enterprise repository ready', iconName: 'FolderGit2' },
   { id: 'pipeline-6', order: 6, title: 'Security Checks', description: 'Security validated', iconName: 'Shield' },
