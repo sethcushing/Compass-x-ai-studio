@@ -29,7 +29,7 @@ export const HeroHeader = () => {
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-8 max-w-4xl">
-          Emergent Builder within your{' '}
+          Compass AI Studio powered by Emergent within your{' '}
           <span className="text-sky-500">enterprise ecosystem</span>
         </h1>
 
