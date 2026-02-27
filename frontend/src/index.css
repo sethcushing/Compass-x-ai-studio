@@ -18,6 +18,10 @@ body {
     color: #0f172a;
 }
 
+#emergent-badge {
+    display: none !important;
+}
+
 code {
     font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, monospace;
 }
