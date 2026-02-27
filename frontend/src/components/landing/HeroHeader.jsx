@@ -6,6 +6,9 @@ const heroTags = [
   { label: 'Human Designed', id: 'tag-1' },
   { label: 'Agentic Built', id: 'tag-2' },
   { label: 'Enterprise Deployed', id: 'tag-3' },
+  { label: 'Security First', id: 'tag-4' },
+  { label: 'Governed Releases', id: 'tag-5' },
+  { label: 'Data Integrated', id: 'tag-6' },
 ];
 
 export const HeroHeader = () => {
@@ -29,7 +32,7 @@ export const HeroHeader = () => {
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-8 max-w-4xl">
-          Compass AI Studio powered by Emergent within your{' '}
+          Compass AI Studio within your{' '}
           <span className="text-sky-500">enterprise ecosystem</span>
         </h1>
 
