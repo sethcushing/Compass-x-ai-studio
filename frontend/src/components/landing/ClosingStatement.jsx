@@ -20,7 +20,7 @@ export const ClosingStatement = () => {
         </div>
 
         <p className="text-2xl lg:text-3xl text-slate-600 leading-relaxed mb-4">
-          Compass AI Studio powered by Emergent accelerates application delivery while preserving
+          Compass AI Studio accelerates application delivery while preserving
           enterprise ownership of infrastructure, identity, data, and release
           governance.
         </p>

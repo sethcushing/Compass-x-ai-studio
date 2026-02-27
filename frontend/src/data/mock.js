@@ -32,7 +32,7 @@ export const timelineSteps = [
     order: 3,
     title: 'Compass AI Studio Build Phase',
     subtitle: 'Compass AI Studio',
-    description: 'Compass AI Studio powered by Emergent constructs the application and integrations',
+    description: 'Compass AI Studio constructs the application and integrations',
     iconName: 'Cpu',
     expandedDetails: [
       'Agentic application construction from specifications',
@@ -143,7 +143,7 @@ export const architectureLayers = [
     id: 'layer-3',
     order: 3,
     title: 'Build Layer',
-    description: 'Compass AI Studio powered by Emergent runtime and agentic development',
+    description: 'Compass AI Studio runtime and agentic development',
     iconName: 'Wrench',
     branches: null,
     expandedDetails: [
