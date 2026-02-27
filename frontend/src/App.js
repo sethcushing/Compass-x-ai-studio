@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "@/App.css";
 import { Navbar } from "./components/landing/Navbar";
 import { HeroHeader } from "./components/landing/HeroHeader";
@@ -12,6 +12,9 @@ import { ClosingStatement } from "./components/landing/ClosingStatement";
 import { Footer } from "./components/landing/Footer";
 
 function App() {
+  useEffect(() => {
+    document.title = "Compass X AI Studio";
+  }, []);
   return (
     <div className="App">
       <Navbar />
