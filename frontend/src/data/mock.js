@@ -452,6 +452,7 @@ export const costAnalysisData = {
     label: 'Traditional Delivery',
     teamSize: '6–8 individuals',
     sprintLength: '2-week sprints',
+    hourlyRate: 200,
     sizes: [
       { label: 'Small', sprints: 3, weeks: 6, people: 6 },
       { label: 'Medium', sprints: 5, weeks: 10, people: 7 },
@@ -462,6 +463,7 @@ export const costAnalysisData = {
   agentic: {
     label: 'Agentic Delivery',
     teamSize: '1 person',
+    hourlyRate: 300,
     sizes: [
       { label: 'Small', hours: 8, days: 1, weeks: 0, months: 0 },
       { label: 'Medium', hours: 40, days: 5, weeks: 1, months: 0 },
