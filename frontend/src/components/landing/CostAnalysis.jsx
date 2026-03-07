@@ -17,57 +17,48 @@ const formatCurrency = (amount) => {
   return `$${amount.toLocaleString()}`;
 };
 
-const TraditionalRow = ({ size, rate }) => {
-  const totalWeeks = size.sprints * 2;
-  const totalHours = totalWeeks * 40 * size.people;
-  const totalCost = totalHours * rate;
-
-  return (
-    <div className="flex items-center gap-4 py-4 border-b border-slate-100 last:border-0">
-      <div className={`w-2 h-10 rounded-full ${sizeColors[size.label]} shrink-0`} />
-      <div className="flex-1 min-w-0">
-        <div className="flex items-baseline gap-2 mb-1">
-          <span className="text-base font-bold text-slate-900">{size.label}</span>
-        </div>
-        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-slate-500">
-          <span>{size.sprints} sprints</span>
-          <span>{totalWeeks} wks</span>
-          <span>{size.people} people</span>
-        </div>
-      </div>
-      <div className="text-right shrink-0">
-        <span className="text-xl font-bold text-slate-900 font-mono">{formatCurrency(totalCost)}</span>
-        <span className="text-sm text-slate-400 block">{totalHours.toLocaleString()} hrs @ ${rate}/hr</span>
-      </div>
-    </div>
-  );
-};
-
-const AgenticRow = ({ size, traditionalSize, tradRate, agenticRate }) => {
-  const tradTotalHours = traditionalSize.sprints * 2 * 40 * traditionalSize.people;
-  const tradCost = tradTotalHours * tradRate;
-  const agenticCost = size.hours * agenticRate;
+const ComparisonRow = ({ tradSize, agenticSize, tradRate, agenticRate }) => {
+  const totalWeeks = tradSize.sprints * 2;
+  const tradHours = totalWeeks * 40 * tradSize.people;
+  const tradCost = tradHours * tradRate;
+  const agenticCost = agenticSize.hours * agenticRate;
   const savings = tradCost - agenticCost;
 
   return (
-    <div className="flex items-center gap-4 py-4 border-b border-slate-100 last:border-0">
-      <div className={`w-2 h-10 rounded-full ${sizeColors[size.label]} shrink-0`} />
-      <div className="flex-1 min-w-0">
-        <div className="flex items-baseline gap-2 mb-1">
-          <span className="text-base font-bold text-slate-900">{size.label}</span>
+    <div className="grid grid-cols-2 gap-6 py-4 border-b border-slate-100 last:border-0">
+      {/* Traditional side */}
+      <div className="flex items-center gap-3">
+        <div className={`w-2 h-12 rounded-full ${sizeColors[tradSize.label]} shrink-0`} />
+        <div className="flex-1 min-w-0">
+          <span className="text-base font-bold text-slate-900">{tradSize.label}</span>
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-sm text-slate-500 mt-0.5">
+            <span>{tradSize.sprints} sprints</span>
+            <span>{totalWeeks} wks</span>
+            <span>{tradSize.people} people</span>
+          </div>
         </div>
-        <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-slate-500">
-          <span>{size.hours} hrs</span>
-          <span>{size.days} days</span>
-          {size.weeks > 0 && <span>{size.weeks} wk{size.weeks !== 1 ? 's' : ''}</span>}
+        <div className="text-right shrink-0">
+          <span className="text-xl font-bold text-slate-900 font-mono">{formatCurrency(tradCost)}</span>
         </div>
       </div>
-      <div className="text-right shrink-0">
-        <span className="text-xl font-bold text-emerald-600 font-mono">{formatCurrency(agenticCost)}</span>
-        <span className="text-sm text-slate-400 block">{size.hours} hrs @ ${agenticRate}/hr</span>
-        <div className="flex items-center gap-1 justify-end mt-1">
-          <TrendingDown size={12} className="text-emerald-500" />
-          <span className="text-sm font-bold text-emerald-600">Save {formatCurrency(savings)}</span>
+
+      {/* Agentic side */}
+      <div className="flex items-center gap-3">
+        <div className={`w-2 h-12 rounded-full ${sizeColors[agenticSize.label]} shrink-0`} />
+        <div className="flex-1 min-w-0">
+          <span className="text-base font-bold text-slate-900">{agenticSize.label}</span>
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-sm text-slate-500 mt-0.5">
+            <span>{agenticSize.hours} hrs</span>
+            <span>{agenticSize.days} days</span>
+            {agenticSize.weeks > 0 && <span>{agenticSize.weeks} wk{agenticSize.weeks !== 1 ? 's' : ''}</span>}
+          </div>
+        </div>
+        <div className="text-right shrink-0">
+          <span className="text-xl font-bold text-emerald-600 font-mono">{formatCurrency(agenticCost)}</span>
+          <div className="flex items-center gap-1 justify-end mt-0.5">
+            <TrendingDown size={12} className="text-emerald-500" />
+            <span className="text-sm font-bold text-emerald-600">Save {formatCurrency(savings)}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -78,7 +69,6 @@ export const CostAnalysis = () => {
   const [ref, isInView] = useInView();
   const { traditional, agentic } = costAnalysisData;
 
-  // Calculate total possible savings for the callout
   const xlTradCost = 24 * 40 * 8 * traditional.hourlyRate;
   const xlAgenticCost = 320 * agentic.hourlyRate;
   const maxSavings = xlTradCost - xlAgenticCost;
@@ -98,53 +88,46 @@ export const CostAnalysis = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Traditional Delivery */}
-          <Card className="border-slate-200 shadow-sm bg-white overflow-hidden" data-testid="traditional-cost-card">
+        <Card className="border-slate-200 shadow-sm bg-white overflow-hidden" data-testid="cost-comparison-card">
+          {/* Side-by-side headers */}
+          <div className="grid grid-cols-2 gap-0">
             <div className="bg-slate-800 px-6 py-5">
               <div className="flex items-center gap-3">
                 <Users size={20} className="text-slate-300" strokeWidth={1.5} />
                 <div>
                   <h3 className="text-base font-bold text-white">{traditional.label}</h3>
                   <p className="text-sm text-slate-400 mt-0.5">
-                    {traditional.teamSize} &middot; {traditional.sprintLength} &middot; ${traditional.hourlyRate}/hr blended rate
+                    {traditional.teamSize} &middot; {traditional.sprintLength} &middot; Avg market rate
                   </p>
                 </div>
               </div>
             </div>
-            <CardContent className="p-5">
-              {traditional.sizes.map((size) => (
-                <TraditionalRow key={size.label} size={size} rate={traditional.hourlyRate} />
-              ))}
-            </CardContent>
-          </Card>
-
-          {/* Agentic Delivery */}
-          <Card className="border-sky-200 shadow-sm bg-white overflow-hidden" data-testid="agentic-cost-card">
             <div className="bg-sky-500 px-6 py-5">
               <div className="flex items-center gap-3">
                 <Zap size={20} className="text-white/90" strokeWidth={1.5} />
                 <div>
                   <h3 className="text-base font-bold text-white">{agentic.label}</h3>
                   <p className="text-sm text-white/70 mt-0.5">
-                    {agentic.teamSize} &middot; ${agentic.hourlyRate}/hr &middot; Measured in hours to weeks
+                    {agentic.teamSize} &middot; Avg market rate &middot; Hours to weeks
                   </p>
                 </div>
               </div>
             </div>
-            <CardContent className="p-5">
-              {agentic.sizes.map((size, i) => (
-                <AgenticRow
-                  key={size.label}
-                  size={size}
-                  traditionalSize={traditional.sizes[i]}
-                  tradRate={traditional.hourlyRate}
-                  agenticRate={agentic.hourlyRate}
-                />
-              ))}
-            </CardContent>
-          </Card>
-        </div>
+          </div>
+
+          {/* Aligned rows */}
+          <CardContent className="p-6">
+            {traditional.sizes.map((tradSize, i) => (
+              <ComparisonRow
+                key={tradSize.label}
+                tradSize={tradSize}
+                agenticSize={agentic.sizes[i]}
+                tradRate={traditional.hourlyRate}
+                agenticRate={agentic.hourlyRate}
+              />
+            ))}
+          </CardContent>
+        </Card>
 
         {/* Summary callout */}
         <div className="mt-8 text-center">
