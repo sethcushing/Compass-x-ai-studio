@@ -26,13 +26,13 @@ export const HeroHeader = () => {
         }`}
       >
         <div className="mb-6">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500">
+          <span className="text-sm font-mono uppercase tracking-[0.2em] text-sky-500">
             Enterprise Architecture
           </span>
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-8 max-w-4xl">
-          Compass AI Studio within your{' '}
+          CompassX AI within your{' '}
           <span className="text-sky-500">enterprise ecosystem</span>
         </h1>
 

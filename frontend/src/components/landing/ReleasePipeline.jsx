@@ -13,7 +13,7 @@ export const ReleasePipeline = () => {
     <section id="pipeline" ref={ref} className="py-14 lg:py-20 bg-white" aria-label="Release pipeline">
       <div className={`max-w-6xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Pipeline</span>
+          <span className="text-sm font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Pipeline</span>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">Release Pipeline</h2>
           <p className="text-lg text-slate-500 max-w-2xl">
             Enterprise-governed stages from design approval to production release
@@ -35,7 +35,7 @@ export const ReleasePipeline = () => {
                       >
                         {IconComponent && <IconComponent size={20} className="text-sky-500" strokeWidth={1.5} />}
                       </div>
-                      <span className="text-xs font-semibold text-slate-700 max-w-[90px] leading-tight">
+                      <span className="text-sm font-semibold text-slate-700 max-w-[90px] leading-tight">
                         {stage.title}
                       </span>
                       {/* Environment badges for CI/CD stage */}
@@ -45,7 +45,7 @@ export const ReleasePipeline = () => {
                             <Badge
                               key={env}
                               variant="outline"
-                              className="text-[8px] px-1.5 py-0 rounded bg-sky-50 text-sky-600 border-sky-200 font-mono"
+                              className="text-[10px] px-1.5 py-0 rounded bg-sky-50 text-sky-600 border-sky-200 font-mono"
                             >
                               {env}
                             </Badge>
@@ -81,7 +81,7 @@ export const ReleasePipeline = () => {
                       {stage.order}
                     </span>
                   </div>
-                  <span className="text-[11px] font-semibold text-slate-700 mt-2 leading-tight">
+                  <span className="text-sm font-semibold text-slate-700 mt-2 leading-tight">
                     {stage.title}
                   </span>
                   {stage.environments && (
@@ -90,7 +90,7 @@ export const ReleasePipeline = () => {
                         <Badge
                           key={env}
                           variant="outline"
-                          className="text-[8px] px-1 py-0 rounded bg-sky-50 text-sky-600 border-sky-200 font-mono"
+                          className="text-[10px] px-1 py-0 rounded bg-sky-50 text-sky-600 border-sky-200 font-mono"
                         >
                           {env}
                         </Badge>
@@ -106,7 +106,7 @@ export const ReleasePipeline = () => {
         {/* Release includes - enriched */}
         <Card className="mt-8 border-slate-200 shadow-sm bg-white">
           <CardContent className="p-6 lg:p-8">
-            <h4 className="text-xs font-mono font-semibold text-slate-900 uppercase tracking-[0.15em] mb-5">
+            <h4 className="text-sm font-mono font-semibold text-slate-900 uppercase tracking-[0.15em] mb-5">
               Each release includes
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -64,7 +64,7 @@ const CategoryColumn = ({ category }) => {
           <CatIcon size={18} className="text-white/90" strokeWidth={1.5} />
           <h3 className="text-base font-bold text-white">{category.title}</h3>
         </div>
-        <p className="text-xs text-white/70 mt-1 leading-relaxed">{category.description}</p>
+        <p className="text-sm text-white/80 mt-1 leading-relaxed">{category.description}</p>
       </div>
 
       {/* Roles list */}
@@ -93,7 +93,7 @@ export const DeliveryTeam = () => {
       <div className={`max-w-6xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         {/* Header */}
         <div className="mb-10 text-center">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">
+          <span className="text-sm font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">
             Delivery Team
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">
@@ -128,7 +128,7 @@ export const DeliveryTeam = () => {
           <p className="text-sm text-slate-500 font-medium">
             Together, these roles converge to form the AI product delivery team
           </p>
-          <p className="text-xs text-slate-400 italic mt-2 max-w-xl mx-auto">
+          <p className="text-sm text-slate-400 italic mt-2 max-w-xl mx-auto">
             {deliveryTeamData.note}
           </p>
         </div>

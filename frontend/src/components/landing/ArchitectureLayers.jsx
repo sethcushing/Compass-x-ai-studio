@@ -12,7 +12,7 @@ export const ArchitectureLayers = () => {
     <section id="architecture" ref={ref} className="py-14 lg:py-20 bg-slate-50/60" aria-label="Architecture layers">
       <div className={`max-w-4xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Architecture</span>
+          <span className="text-sm font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Architecture</span>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">Architecture Layers</h2>
           <p className="text-lg text-slate-500 max-w-2xl">
             Stacked layers from experience to data — click any layer to explore
@@ -37,7 +37,7 @@ export const ArchitectureLayers = () => {
 
                       {/* Layer number */}
                       <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
-                        <span className="text-[10px] font-mono font-bold text-slate-400">
+                        <span className="text-[11px] font-mono font-bold text-slate-400">
                           {String(layer.order).padStart(2, '0')}
                         </span>
                       </div>
@@ -81,7 +81,7 @@ export const ArchitectureLayers = () => {
                                 role="listitem"
                               >
                                 {BranchIcon && <BranchIcon size={14} className="text-sky-500" strokeWidth={1.5} />}
-                                <span className="text-xs font-mono font-medium text-slate-700">{branch.title}</span>
+                                <span className="text-sm font-mono font-medium text-slate-700">{branch.title}</span>
                               </div>
                             );
                           })}

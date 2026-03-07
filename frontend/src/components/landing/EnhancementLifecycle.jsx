@@ -32,7 +32,7 @@ export const EnhancementLifecycle = () => {
     <section id="enhancement" ref={ref} className="py-14 lg:py-20 bg-white" aria-label="Enhancement lifecycle">
       <div className={`max-w-5xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10 text-center">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">
+          <span className="text-sm font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">
             Lifecycle
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">
@@ -45,7 +45,7 @@ export const EnhancementLifecycle = () => {
           <div className="relative border-2 border-dashed border-sky-200 rounded-[2rem] py-8 px-10">
             {/* Continuous cycle label */}
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white px-5">
-              <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-slate-400">
+              <span className="text-[11px] font-mono uppercase tracking-[0.25em] text-slate-400">
                 Continuous Cycle
               </span>
             </div>
@@ -66,11 +66,11 @@ export const EnhancementLifecycle = () => {
             <div className="flex items-center justify-between px-10 my-5">
               <div className="flex items-center gap-1.5 text-sky-400">
                 <ArrowUp size={14} />
-                <span className="text-[9px] font-mono uppercase tracking-[0.15em]">return</span>
+                <span className="text-[11px] font-mono uppercase tracking-[0.15em]">return</span>
               </div>
               <div className="flex-1 border-t border-dashed border-slate-200 mx-8" />
               <div className="flex items-center gap-1.5 text-sky-400">
-                <span className="text-[9px] font-mono uppercase tracking-[0.15em]">continue</span>
+                <span className="text-[11px] font-mono uppercase tracking-[0.15em]">continue</span>
                 <ArrowDown size={14} />
               </div>
             </div>
@@ -104,7 +104,7 @@ export const EnhancementLifecycle = () => {
                       </div>
                       <div>
                         <h4 className="text-sm font-semibold text-slate-800">{step.title}</h4>
-                        <p className="text-xs text-slate-500 mt-0.5">{step.description}</p>
+                        <p className="text-sm text-slate-500 mt-0.5">{step.description}</p>
                       </div>
                     </div>
                   </div>

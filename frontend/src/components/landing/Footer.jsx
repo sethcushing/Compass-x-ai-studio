@@ -12,10 +12,10 @@ export const Footer = () => {
               <span className="text-white text-[8px] font-bold font-mono">CX</span>
             </div>
             <span className="text-sm font-bold text-slate-900 tracking-tight">
-              Compass X <span className="font-normal text-slate-500">AI Studio</span>
+              CompassX <span className="font-normal text-slate-500">AI</span>
             </span>
           </div>
-          <span className="text-xs text-slate-400 font-mono">
+          <span className="text-sm text-slate-400 font-mono">
             Enterprise Architecture Documentation
           </span>
         </div>

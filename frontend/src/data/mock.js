@@ -30,9 +30,9 @@ export const timelineSteps = [
   {
     id: 'step-3',
     order: 3,
-    title: 'Compass AI Studio Build Phase',
-    subtitle: 'Compass AI Studio',
-    description: 'Compass AI Studio constructs the application and integrations',
+    title: 'CompassX AI Build Phase',
+    subtitle: 'CompassX AI',
+    description: 'CompassX AI constructs the application and integrations',
     iconName: 'Cpu',
     expandedDetails: [
       'Agentic application construction from specifications',
@@ -72,12 +72,12 @@ export const timelineSteps = [
   {
     id: 'step-6',
     order: 6,
-    title: 'Enterprise CI/CD Execution',
-    subtitle: 'CI/CD Pipelines',
-    description: 'Enterprise pipelines deploy using internal change processes',
+    title: 'Koyeb Automated Deployment',
+    subtitle: 'Koyeb',
+    description: 'Koyeb CI/CD automated agent pipeline deploys using internal change processes',
     iconName: 'GitPullRequest',
     expandedDetails: [
-      'Automated build, lint, and artifact creation',
+      'Automated build, lint, and artifact creation via Koyeb pipelines',
       'Deployment to QA and UAT environments for validation',
       'Integration testing across enterprise systems',
       'Change management approval gates and promotion workflows'
@@ -87,11 +87,11 @@ export const timelineSteps = [
     id: 'step-7',
     order: 7,
     title: 'Production Deployment',
-    subtitle: 'AWS App Runner',
-    description: 'Application runs inside enterprise cloud with identity and data integration',
+    subtitle: 'AWS / GCP / Azure',
+    description: 'Application runs inside enterprise cloud with identity and data integration across any environment',
     iconName: 'Cloud',
     expandedDetails: [
-      'Blue-green deployment with zero-downtime rollout',
+      'Multi-cloud deployment support (AWS App Runner, GCP Cloud Run, Azure Container Apps)',
       'Identity provider integration (SSO, IAM, RBAC)',
       'Enterprise monitoring, alerting, and log aggregation',
       'Data layer connectivity verification and health checks'
@@ -102,11 +102,11 @@ export const timelineSteps = [
 export const loopFlow = [
   { id: 'loop-1', order: 1, title: 'Design', description: 'Experience design and requirements', iconName: 'PenTool' },
   { id: 'loop-2', order: 2, title: 'Spec Repo', description: 'Specification repository updated', iconName: 'GitBranch' },
-  { id: 'loop-3', order: 3, title: 'Compass AI Studio Build', description: 'Agentic application construction', iconName: 'Cpu' },
+  { id: 'loop-3', order: 3, title: 'CompassX AI Build', description: 'Agentic application construction', iconName: 'Cpu' },
   { id: 'loop-4', order: 4, title: 'Validation', description: 'Business and technical validation', iconName: 'ShieldCheck' },
   { id: 'loop-5', order: 5, title: 'Release Repo', description: 'Enterprise repository creation', iconName: 'Package' },
-  { id: 'loop-6', order: 6, title: 'Enterprise CI/CD', description: 'Pipeline execution', iconName: 'GitPullRequest' },
-  { id: 'loop-7', order: 7, title: 'Production', description: 'Live enterprise deployment', iconName: 'Cloud' },
+  { id: 'loop-6', order: 6, title: 'Koyeb Deploy', description: 'CI/CD automated agent pipeline', iconName: 'GitPullRequest' },
+  { id: 'loop-7', order: 7, title: 'Production', description: 'Live multi-cloud deployment', iconName: 'Cloud' },
   { id: 'loop-8', order: 8, title: 'Enhancement Request', description: 'Change request triggers new cycle', iconName: 'RefreshCw' }
 ];
 
@@ -143,7 +143,7 @@ export const architectureLayers = [
     id: 'layer-3',
     order: 3,
     title: 'Build Layer',
-    description: 'Compass AI Studio runtime and agentic development',
+    description: 'CompassX AI runtime and agentic development',
     iconName: 'Wrench',
     branches: null,
     expandedDetails: [
@@ -156,14 +156,14 @@ export const architectureLayers = [
   {
     id: 'layer-4',
     order: 4,
-    title: 'Enterprise Delivery Layer',
-    description: 'Release repository and enterprise pipelines',
+    title: 'Koyeb Delivery Layer',
+    description: 'Koyeb CI/CD automated agent pipeline and multi-cloud deployment',
     iconName: 'Send',
     branches: null,
     expandedDetails: [
-      'Release branch management, tagging, and versioning',
-      'CI/CD pipeline configurations with multi-stage gates',
-      'Environment promotion workflows (Dev → QA → UAT → Prod)',
+      'Koyeb automated build, tagging, and versioning pipelines',
+      'CI/CD pipeline configurations with multi-stage approval gates',
+      'Environment promotion workflows (Dev → QA → UAT → Prod) across AWS, GCP, and Azure',
       'Artifact versioning, container registry, and rollback support'
     ]
   },
@@ -204,15 +204,15 @@ export const architectureLayers = [
 export const pipelineStages = [
   { id: 'pipeline-1', order: 1, title: 'Design Approved', description: 'Business design validated', iconName: 'CheckCircle' },
   { id: 'pipeline-2', order: 2, title: 'Spec Repo Updated', description: 'Specifications committed', iconName: 'RefreshCw' },
-  { id: 'pipeline-3', order: 3, title: 'Compass AI Studio Build', description: 'Application constructed', iconName: 'Cpu' },
+  { id: 'pipeline-3', order: 3, title: 'CompassX AI Build', description: 'Application constructed', iconName: 'Cpu' },
   { id: 'pipeline-4', order: 4, title: 'Validation Signoff', description: 'Quality verified', iconName: 'BadgeCheck' },
   { id: 'pipeline-5', order: 5, title: 'Release Repo Created', description: 'Enterprise repository ready', iconName: 'FolderGit2' },
   { id: 'pipeline-6', order: 6, title: 'Security Checks', description: 'Security validated', iconName: 'Shield' },
   {
     id: 'pipeline-7',
     order: 7,
-    title: 'Enterprise Pipeline Deploy',
-    description: 'CI/CD execution across environments',
+    title: 'Koyeb Pipeline Deploy',
+    description: 'Koyeb CI/CD execution across environments',
     iconName: 'Rocket',
     environments: ['Development', 'QA', 'UAT', 'Staging', 'Production']
   },
@@ -443,4 +443,30 @@ export const deliveryTeamData = {
       ]
     }
   ]
+};
+
+export const costAnalysisData = {
+  title: 'Delivery Cost Comparison',
+  description: 'Traditional team-based delivery vs. agentic delivery with CompassX AI — see the savings at every scale.',
+  traditional: {
+    label: 'Traditional Delivery',
+    teamSize: '6–8 individuals',
+    sprintLength: '2-week sprints',
+    sizes: [
+      { label: 'Small', sprints: 3, weeks: 6, people: 6 },
+      { label: 'Medium', sprints: 5, weeks: 10, people: 7 },
+      { label: 'Large', sprints: 8, weeks: 16, people: 7 },
+      { label: 'X-Large', sprints: 12, weeks: 24, people: 8 }
+    ]
+  },
+  agentic: {
+    label: 'Agentic Delivery',
+    teamSize: '1 person',
+    sizes: [
+      { label: 'Small', hours: 8, days: 1, weeks: 0, months: 0 },
+      { label: 'Medium', hours: 40, days: 5, weeks: 1, months: 0 },
+      { label: 'Large', hours: 120, days: 15, weeks: 2, months: 0.5 },
+      { label: 'X-Large', hours: 320, days: 40, weeks: 6, months: 1.5 }
+    ]
+  }
 };

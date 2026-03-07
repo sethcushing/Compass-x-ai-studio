@@ -71,7 +71,7 @@ export const DeliveryFlow = () => {
     <section id="delivery" ref={ref} className="py-14 lg:py-20 bg-slate-50/60" aria-label="Delivery walkthrough">
       <div className={`max-w-7xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Process</span>
+          <span className="text-sm font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Process</span>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">Delivery Walkthrough</h2>
           <p className="text-lg text-slate-500 max-w-2xl">
             From design to production — click any step to explore details
@@ -109,7 +109,7 @@ export const DeliveryFlow = () => {
                       </div>
                       <h3 className="text-sm font-semibold text-slate-900 mb-0.5 leading-tight">{step.title}</h3>
                       {step.subtitle && (
-                        <span className="text-[10px] font-mono text-sky-500 uppercase tracking-widest block mb-1.5">{step.subtitle}</span>
+                        <span className="text-[11px] font-mono text-sky-500 uppercase tracking-widest block mb-1.5">{step.subtitle}</span>
                       )}
                       <p className="text-sm text-slate-500 leading-relaxed">{step.description}</p>
                       <ChevronDown
@@ -165,9 +165,9 @@ export const DeliveryFlow = () => {
                         <div className="flex-1">
                           <h3 className="text-sm font-semibold text-slate-900 mb-0.5">{step.title}</h3>
                           {step.subtitle && (
-                            <span className="text-[10px] font-mono text-sky-500 uppercase tracking-widest">{step.subtitle}</span>
+                            <span className="text-[11px] font-mono text-sky-500 uppercase tracking-widest">{step.subtitle}</span>
                           )}
-                          <p className="text-xs text-slate-500 mt-1">{step.description}</p>
+                          <p className="text-sm text-slate-500 mt-1">{step.description}</p>
                         </div>
                         <ChevronDown
                           size={14}
@@ -179,7 +179,7 @@ export const DeliveryFlow = () => {
                         <div className="animate-slide-down mt-4 pt-4 border-t border-slate-100">
                           <ul className="space-y-2">
                             {step.expandedDetails.map((detail, i) => (
-                              <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
+                              <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
                                 <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-[5px] shrink-0" />
                                 {detail}
                               </li>

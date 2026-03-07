@@ -8,12 +8,13 @@ import { ArchitectureLayers } from "./components/landing/ArchitectureLayers";
 import { ReleasePipeline } from "./components/landing/ReleasePipeline";
 import { GovernanceModel } from "./components/landing/GovernanceModel";
 import { DeliveryTeam } from "./components/landing/DeliveryTeam";
+import { CostAnalysis } from "./components/landing/CostAnalysis";
 import { ClosingStatement } from "./components/landing/ClosingStatement";
 import { Footer } from "./components/landing/Footer";
 
 function App() {
   useEffect(() => {
-    document.title = "Compass X AI Studio";
+    document.title = "CompassX AI";
   }, []);
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
         <ReleasePipeline />
         <GovernanceModel />
         <DeliveryTeam />
+        <CostAnalysis />
         <ClosingStatement />
       </main>
       <Footer />

@@ -19,7 +19,7 @@ const StateDetailPanel = ({ state }) => {
       <p className="text-sm text-slate-600 mb-4">{state.description}</p>
 
       <div className="mb-4">
-        <span className="text-[10px] font-mono uppercase tracking-[0.15em] text-sky-500 block mb-2">
+        <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-sky-500 block mb-2">
           Requirements
         </span>
         <ul className="space-y-1.5">
@@ -54,7 +54,7 @@ export const GovernanceModel = () => {
     <section id="governance" ref={ref} className="py-14 lg:py-20 bg-slate-50/60" aria-label="Governance and guardrails">
       <div className={`max-w-6xl mx-auto px-6 lg:px-8 section-animate ${isInView ? 'visible' : ''}`}>
         <div className="mb-10">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Controls</span>
+          <span className="text-sm font-mono uppercase tracking-[0.2em] text-sky-500 mb-2 block">Controls</span>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-3">Governance Model</h2>
           <p className="text-lg text-slate-500 max-w-2xl">
             Enterprise controls ensuring security, traceability, and compliance
@@ -74,16 +74,16 @@ export const GovernanceModel = () => {
 
               {/* Approval lifecycle states - clickable */}
               <div className="mb-6">
-                <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-sky-500 mb-1.5">
+                <h4 className="text-[11px] font-mono uppercase tracking-[0.2em] text-sky-500 mb-1.5">
                   Approval Lifecycle States
                 </h4>
-                <p className="text-xs text-slate-400 mb-3">Select a state to view its requirements</p>
+                <p className="text-sm text-slate-400 mb-3">Select a state to view its requirements</p>
                 <div className="flex flex-wrap gap-2">
                   {governanceData.approvalStates.map((state) => (
                     <Badge
                       key={state.label}
                       variant="outline"
-                      className={`px-3 py-1.5 text-xs font-medium rounded-full cursor-pointer ${
+                      className={`px-3 py-1.5 text-sm font-medium rounded-full cursor-pointer ${
                         selectedState === state.label
                           ? 'bg-sky-500 text-white border-sky-500'
                           : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
@@ -107,7 +107,7 @@ export const GovernanceModel = () => {
 
               {/* Required reviewers */}
               <div className="mb-6">
-                <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-sky-500 mb-3">
+                <h4 className="text-[11px] font-mono uppercase tracking-[0.2em] text-sky-500 mb-3">
                   Required Reviewers
                 </h4>
                 <ul className="space-y-2">
@@ -124,7 +124,7 @@ export const GovernanceModel = () => {
 
               {/* Traceability */}
               <div>
-                <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-sky-500 mb-3">
+                <h4 className="text-[11px] font-mono uppercase tracking-[0.2em] text-sky-500 mb-3">
                   Traceability
                 </h4>
                 <p className="text-sm text-slate-600 leading-relaxed">
@@ -154,7 +154,7 @@ export const GovernanceModel = () => {
                         {SectionIcon && (
                           <SectionIcon size={14} className="text-sky-500" strokeWidth={1.5} />
                         )}
-                        <h4 className="text-[10px] font-mono uppercase tracking-[0.2em] text-sky-500">
+                        <h4 className="text-[11px] font-mono uppercase tracking-[0.2em] text-sky-500">
                           {section.title}
                         </h4>
                       </div>

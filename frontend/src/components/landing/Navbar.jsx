@@ -35,7 +35,7 @@ export const Navbar = () => {
               <span className="text-white text-[9px] font-bold font-mono">CX</span>
             </div>
             <span className="text-lg font-bold text-slate-900 tracking-tight font-sans">
-              Compass X <span className="font-normal text-slate-500">AI Studio</span>
+              CompassX <span className="font-normal text-slate-500">AI</span>
             </span>
           </a>
 
