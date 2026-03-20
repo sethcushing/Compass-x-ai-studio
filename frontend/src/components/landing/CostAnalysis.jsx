@@ -44,22 +44,23 @@ export const CostAnalysis = () => {
 
   const { traditionalRate, agenticRate, hoursPerWeek, weeksPerSprint } = costAnalysisData;
 
+  const agenticTeamSize = 4;
+
   const calc = useMemo(() => {
     const weeks = sprints * weeksPerSprint;
     const tradHours = weeks * hoursPerWeek * people;
     const tradCost = tradHours * traditionalRate;
 
-    // Agentic: 1 person, dramatically fewer hours
-    // Rough model: ~2-4% of traditional hours depending on scale
-    const agenticHours = Math.max(4, Math.round(tradHours * 0.03));
-    const agenticCost = agenticHours * agenticRate;
+    // Agentic: 4 person team, dramatically fewer hours per person
+    const agenticTotalHours = Math.max(16, Math.round(tradHours * 0.03)) * agenticTeamSize;
+    const agenticCost = agenticTotalHours * agenticRate;
     const savings = tradCost - agenticCost;
     const savingsPercent = Math.round((savings / tradCost) * 100);
 
-    const agenticDays = Math.round(agenticHours / 8);
-    const agenticWeeks = parseFloat((agenticHours / 40).toFixed(1));
+    const agenticDays = Math.round(agenticTotalHours / (8 * agenticTeamSize));
+    const agenticWeeks = parseFloat((agenticTotalHours / (40 * agenticTeamSize)).toFixed(1));
 
-    return { weeks, tradHours, tradCost, agenticHours, agenticCost, agenticDays, agenticWeeks, savings, savingsPercent };
+    return { weeks, tradHours, tradCost, agenticTotalHours, agenticCost, agenticDays, agenticWeeks, savings, savingsPercent };
   }, [people, sprints, traditionalRate, agenticRate, hoursPerWeek, weeksPerSprint]);
 
   return (
@@ -134,7 +135,7 @@ export const CostAnalysis = () => {
                 <Zap size={20} className="text-white/90" strokeWidth={1.5} />
                 <div>
                   <h3 className="text-base font-bold text-white">Agentic Delivery</h3>
-                  <p className="text-sm text-white/70">1 person &middot; Avg market rate</p>
+                  <p className="text-sm text-white/70">{agenticTeamSize} people &middot; Avg market rate</p>
                 </div>
               </div>
             </div>
@@ -145,7 +146,7 @@ export const CostAnalysis = () => {
               </div>
               <div className="grid grid-cols-3 gap-4 border-t border-slate-100 pt-5">
                 <div className="text-center">
-                  <span className="text-lg font-bold text-slate-700 font-mono">{calc.agenticHours}</span>
+                  <span className="text-lg font-bold text-slate-700 font-mono">{calc.agenticTotalHours}</span>
                   <span className="text-sm text-slate-400 block">Total hours</span>
                 </div>
                 <div className="text-center">
@@ -153,8 +154,8 @@ export const CostAnalysis = () => {
                   <span className="text-sm text-slate-400 block">Days</span>
                 </div>
                 <div className="text-center">
-                  <span className="text-lg font-bold text-slate-700 font-mono">{calc.agenticWeeks}</span>
-                  <span className="text-sm text-slate-400 block">Weeks</span>
+                  <span className="text-lg font-bold text-slate-700 font-mono">{agenticTeamSize}</span>
+                  <span className="text-sm text-slate-400 block">People</span>
                 </div>
               </div>
             </CardContent>
