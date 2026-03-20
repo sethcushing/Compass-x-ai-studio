@@ -30,7 +30,7 @@ export const timelineSteps = [
   {
     id: 'step-3',
     order: 3,
-    title: 'CompassX AI Build Phase',
+    title: 'Emergent Build Phase',
     subtitle: 'CompassX AI',
     description: 'CompassX AI constructs the application and integrations',
     iconName: 'Cpu',
@@ -102,7 +102,7 @@ export const timelineSteps = [
 export const loopFlow = [
   { id: 'loop-1', order: 1, title: 'Design', description: 'Experience design and requirements', iconName: 'PenTool' },
   { id: 'loop-2', order: 2, title: 'Spec Repo', description: 'Specification repository updated', iconName: 'GitBranch' },
-  { id: 'loop-3', order: 3, title: 'CompassX AI Build', description: 'Agentic application construction', iconName: 'Cpu' },
+  { id: 'loop-3', order: 3, title: 'Emergent Build', description: 'Agentic application construction', iconName: 'Cpu' },
   { id: 'loop-4', order: 4, title: 'Validation', description: 'Business and technical validation', iconName: 'ShieldCheck' },
   { id: 'loop-5', order: 5, title: 'Release Repo', description: 'Enterprise repository creation', iconName: 'Package' },
   { id: 'loop-6', order: 6, title: 'Koyeb Deploy', description: 'CI/CD automated agent pipeline', iconName: 'GitPullRequest' },
@@ -204,7 +204,7 @@ export const architectureLayers = [
 export const pipelineStages = [
   { id: 'pipeline-1', order: 1, title: 'Design Approved', description: 'Business design validated', iconName: 'CheckCircle' },
   { id: 'pipeline-2', order: 2, title: 'Spec Repo Updated', description: 'Specifications committed', iconName: 'RefreshCw' },
-  { id: 'pipeline-3', order: 3, title: 'CompassX AI Build', description: 'Application constructed', iconName: 'Cpu' },
+  { id: 'pipeline-3', order: 3, title: 'Emergent Build', description: 'Application constructed', iconName: 'Cpu' },
   { id: 'pipeline-4', order: 4, title: 'Validation Signoff', description: 'Quality verified', iconName: 'BadgeCheck' },
   { id: 'pipeline-5', order: 5, title: 'Release Repo Created', description: 'Enterprise repository ready', iconName: 'FolderGit2' },
   { id: 'pipeline-6', order: 6, title: 'Security Checks', description: 'Security validated', iconName: 'Shield' },
@@ -448,6 +448,7 @@ export const partnershipsData = {
       name: 'Emergent',
       description: 'Agentic AI development platform powering rapid application construction and delivery',
       iconName: 'Zap',
+      logo: '/logos/emergent.png',
       enablement: [
         'Agentic application development that reduces build time from months to days',
         'Full-stack AI-powered code generation with enterprise-grade architecture patterns',
@@ -462,6 +463,7 @@ export const partnershipsData = {
       name: 'Figma',
       description: 'Collaborative design platform for human experience design and interactive prototyping',
       iconName: 'PenTool',
+      logo: '/logos/figma.png',
       enablement: [
         'Human-centered design workflows that translate business requirements into visual prototypes',
         'Real-time collaboration between designers, solution owners, and stakeholders',
@@ -476,6 +478,7 @@ export const partnershipsData = {
       name: 'Koyeb',
       description: 'CI/CD automated agent pipeline for seamless multi-cloud deployment and scaling',
       iconName: 'GitPullRequest',
+      logo: '/logos/koyeb.png',
       enablement: [
         'Automated CI/CD pipelines that deploy applications across AWS, GCP, and Azure',
         'Zero-downtime deployments with built-in health checks and auto-rollback',
@@ -490,6 +493,7 @@ export const partnershipsData = {
       name: 'Databricks',
       description: 'Unified analytics and AI platform for large-scale data engineering and machine learning',
       iconName: 'Activity',
+      logo: '/logos/databricks.png',
       enablement: [
         'Unified data lakehouse architecture combining data engineering and AI workloads',
         'Scalable ETL and data pipeline orchestration using Apache Spark and Delta Lake',
@@ -504,6 +508,7 @@ export const partnershipsData = {
       name: 'Snowflake',
       description: 'Cloud data platform for secure data warehousing, sharing, and analytics at scale',
       iconName: 'Database',
+      logo: '/logos/snowflake.png',
       enablement: [
         'Elastic cloud data warehousing with automatic scaling and near-zero maintenance',
         'Secure data sharing across organizations without data movement or copying',
