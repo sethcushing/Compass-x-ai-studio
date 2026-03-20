@@ -447,59 +447,80 @@ export const partnershipsData = {
       id: 'emergent',
       name: 'Emergent',
       description: 'Agentic AI development platform powering rapid application construction and delivery',
-      iconName: 'Zap'
+      iconName: 'Zap',
+      enablement: [
+        'Agentic application development that reduces build time from months to days',
+        'Full-stack AI-powered code generation with enterprise-grade architecture patterns',
+        'Automated testing, deployment, and iteration cycles within a single platform',
+        'Integrated LLM orchestration across OpenAI, Anthropic, and Google models',
+        'Version control and rollback capabilities for safe production deployments',
+        'Real-time preview environments for stakeholder validation before release'
+      ]
     },
     {
       id: 'figma',
       name: 'Figma',
       description: 'Collaborative design platform for human experience design and interactive prototyping',
-      iconName: 'PenTool'
+      iconName: 'PenTool',
+      enablement: [
+        'Human-centered design workflows that translate business requirements into visual prototypes',
+        'Real-time collaboration between designers, solution owners, and stakeholders',
+        'Design system management ensuring consistency across all delivered AI products',
+        'Interactive prototyping for user acceptance testing before development begins',
+        'Developer handoff with precise specifications, assets, and component libraries',
+        'Accessibility auditing and responsive design validation across devices'
+      ]
     },
     {
       id: 'koyeb',
       name: 'Koyeb',
       description: 'CI/CD automated agent pipeline for seamless multi-cloud deployment and scaling',
-      iconName: 'GitPullRequest'
+      iconName: 'GitPullRequest',
+      enablement: [
+        'Automated CI/CD pipelines that deploy applications across AWS, GCP, and Azure',
+        'Zero-downtime deployments with built-in health checks and auto-rollback',
+        'Container-native infrastructure with automatic scaling based on demand',
+        'Integrated secret management and environment variable configuration',
+        'Multi-region deployment support for low-latency global delivery',
+        'Built-in monitoring, logging, and alerting for production observability'
+      ]
     },
     {
       id: 'databricks',
       name: 'Databricks',
       description: 'Unified analytics and AI platform for large-scale data engineering and machine learning',
-      iconName: 'Activity'
+      iconName: 'Activity',
+      enablement: [
+        'Unified data lakehouse architecture combining data engineering and AI workloads',
+        'Scalable ETL and data pipeline orchestration using Apache Spark and Delta Lake',
+        'ML model training, experiment tracking, and production model serving',
+        'Real-time streaming analytics for event-driven AI applications',
+        'Data governance with Unity Catalog for enterprise-wide data access control',
+        'Collaborative notebooks enabling data scientists and engineers to work together'
+      ]
     },
     {
       id: 'snowflake',
       name: 'Snowflake',
       description: 'Cloud data platform for secure data warehousing, sharing, and analytics at scale',
-      iconName: 'Database'
+      iconName: 'Database',
+      enablement: [
+        'Elastic cloud data warehousing with automatic scaling and near-zero maintenance',
+        'Secure data sharing across organizations without data movement or copying',
+        'Native support for structured and semi-structured data (JSON, Parquet, Avro)',
+        'Time travel and fail-safe capabilities for data recovery and auditability',
+        'Snowpark for building data pipelines and ML models natively in the platform',
+        'Role-based access control and end-to-end encryption for enterprise security'
+      ]
     }
   ]
 };
 
 export const costAnalysisData = {
   title: 'Delivery Cost Comparison',
-  description: 'Traditional team-based delivery vs. agentic delivery with CompassX AI — see the savings at every scale.',
-  traditional: {
-    label: 'Traditional Delivery',
-    teamSize: '6–8 individuals',
-    sprintLength: '2-week sprints',
-    hourlyRate: 200,
-    sizes: [
-      { label: 'Small', sprints: 3, weeks: 6, people: 6 },
-      { label: 'Medium', sprints: 5, weeks: 10, people: 7 },
-      { label: 'Large', sprints: 8, weeks: 16, people: 7 },
-      { label: 'X-Large', sprints: 12, weeks: 24, people: 8 }
-    ]
-  },
-  agentic: {
-    label: 'Agentic Delivery',
-    teamSize: '1 person',
-    hourlyRate: 300,
-    sizes: [
-      { label: 'Small', hours: 8, days: 1, weeks: 0, months: 0 },
-      { label: 'Medium', hours: 40, days: 5, weeks: 1, months: 0 },
-      { label: 'Large', hours: 120, days: 15, weeks: 2, months: 0.5 },
-      { label: 'X-Large', hours: 320, days: 40, weeks: 6, months: 1.5 }
-    ]
-  }
+  description: 'See the real savings — select your team size and sprint count to compare traditional delivery against agentic delivery with CompassX AI.',
+  traditionalRate: 200,
+  agenticRate: 300,
+  hoursPerWeek: 40,
+  weeksPerSprint: 2
 };
