@@ -2,6 +2,22 @@ export const timelineSteps = [
   {
     id: 'step-1',
     order: 1,
+    title: 'Discovery & Workshops',
+    subtitle: 'Human First',
+    description: 'Stakeholder interviews, workshops, and user research to define what we build and why',
+    iconName: 'User',
+    expandedDetails: [
+      'Stakeholder interviews to understand business goals, pain points, and success criteria',
+      'Collaborative workshops with end users to map current processes and identify opportunities',
+      'User persona development and needs analysis to ensure we build for the right audience',
+      'Requirements prioritization sessions to align delivery with business value',
+      'Change readiness assessments to prepare organizations for AI-driven transformation',
+      'Discovery synthesis and alignment documentation shared with all stakeholders'
+    ]
+  },
+  {
+    id: 'step-2',
+    order: 2,
     title: 'Experience Design',
     subtitle: 'Figma Make',
     description: 'User journeys and requirements defined and validated with business',
@@ -14,8 +30,8 @@ export const timelineSteps = [
     ]
   },
   {
-    id: 'step-2',
-    order: 2,
+    id: 'step-3',
+    order: 3,
     title: 'Specification Repository',
     subtitle: 'GitHub',
     description: 'Approved specifications committed as build source',
@@ -28,8 +44,8 @@ export const timelineSteps = [
     ]
   },
   {
-    id: 'step-3',
-    order: 3,
+    id: 'step-4',
+    order: 4,
     title: 'Emergent Build Phase',
     subtitle: 'CompassX AI',
     description: 'CompassX AI constructs the application and integrations',
@@ -42,8 +58,8 @@ export const timelineSteps = [
     ]
   },
   {
-    id: 'step-4',
-    order: 4,
+    id: 'step-5',
+    order: 5,
     title: 'Validation and Hardening',
     subtitle: 'QA Gate',
     description: 'Business and technical validation of functionality and data',
@@ -56,8 +72,8 @@ export const timelineSteps = [
     ]
   },
   {
-    id: 'step-5',
-    order: 5,
+    id: 'step-6',
+    order: 6,
     title: 'Release Repository Creation',
     subtitle: 'Enterprise GitHub',
     description: 'Validated application pushed to a new GitHub repository for enterprise ownership',
@@ -70,8 +86,8 @@ export const timelineSteps = [
     ]
   },
   {
-    id: 'step-6',
-    order: 6,
+    id: 'step-7',
+    order: 7,
     title: 'Koyeb Automated Deployment',
     subtitle: 'Koyeb',
     description: 'Koyeb CI/CD automated agent pipeline deploys using internal change processes',
@@ -84,8 +100,8 @@ export const timelineSteps = [
     ]
   },
   {
-    id: 'step-7',
-    order: 7,
+    id: 'step-8',
+    order: 8,
     title: 'Production Deployment',
     subtitle: 'AWS / GCP / Azure',
     description: 'Application runs inside enterprise cloud with identity and data integration across any environment',
