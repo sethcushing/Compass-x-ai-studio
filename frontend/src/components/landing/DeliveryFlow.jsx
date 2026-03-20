@@ -81,8 +81,8 @@ export const DeliveryFlow = () => {
         {/* Desktop: horizontal timeline */}
         <div className="hidden lg:block" role="list" aria-label="Delivery steps">
           <div className="relative mb-6">
-            <div className="absolute top-5 left-[7%] right-[7%] h-[2px] bg-slate-200" aria-hidden="true" />
-            <div className="grid grid-cols-7 relative">
+            <div className="absolute top-5 left-[5%] right-[5%] h-[2px] bg-slate-200" aria-hidden="true" />
+            <div className="grid grid-cols-8 relative">
               {timelineSteps.map((step) => (
                 <div key={step.id} className="flex justify-center">
                   <StepCircle step={step} isSelected={selectedStep === step.id} onClick={() => toggleStep(step.id)} />
@@ -91,7 +91,7 @@ export const DeliveryFlow = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-7 gap-3">
+          <div className="grid grid-cols-8 gap-2">
             {timelineSteps.map((step) => {
               const IconComponent = getIcon(step.iconName);
               return (
@@ -103,18 +103,18 @@ export const DeliveryFlow = () => {
                     style={{ transition: 'box-shadow 0.2s ease, border-color 0.2s ease' }}
                     onClick={() => toggleStep(step.id)}
                   >
-                    <CardContent className="p-4 text-center">
-                      <div className="w-9 h-9 rounded-lg bg-slate-50 flex items-center justify-center mb-2.5 mx-auto">
-                        {IconComponent && <IconComponent size={18} className="text-slate-600" strokeWidth={1.5} />}
+                    <CardContent className="p-3 text-center">
+                      <div className="w-8 h-8 rounded-lg bg-slate-50 flex items-center justify-center mb-2 mx-auto">
+                        {IconComponent && <IconComponent size={16} className="text-slate-600" strokeWidth={1.5} />}
                       </div>
-                      <h3 className="text-sm font-semibold text-slate-900 mb-0.5 leading-tight">{step.title}</h3>
+                      <h3 className="text-xs font-semibold text-slate-900 mb-0.5 leading-tight">{step.title}</h3>
                       {step.subtitle && (
-                        <span className="text-[11px] font-mono text-sky-500 uppercase tracking-widest block mb-1.5">{step.subtitle}</span>
+                        <span className="text-[10px] font-mono text-sky-500 uppercase tracking-widest block mb-1">{step.subtitle}</span>
                       )}
-                      <p className="text-sm text-slate-500 leading-relaxed">{step.description}</p>
+                      <p className="text-xs text-slate-500 leading-relaxed">{step.description}</p>
                       <ChevronDown
-                        size={14}
-                        className={`mx-auto mt-2 text-slate-300 ${selectedStep === step.id ? 'rotate-180 text-sky-400' : ''}`}
+                        size={12}
+                        className={`mx-auto mt-1.5 text-slate-300 ${selectedStep === step.id ? 'rotate-180 text-sky-400' : ''}`}
                         style={{ transition: 'transform 0.2s ease, color 0.2s ease' }}
                       />
                     </CardContent>
