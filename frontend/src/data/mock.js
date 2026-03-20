@@ -333,114 +333,145 @@ export const guardrailsData = {
 
 
 export const deliveryTeamData = {
-  title: 'Developing and Managing AI Products',
-  description: 'AI Products require a designated product manager who oversees a team of experts to build, support, and improve the AI product over time. Both the manager and the AI product team should sit within a business team and leverage an organization COE that determines standards and best practices for developing AI products.',
-  note: 'This diagram represents all roles at full maturity for a large AI product. Four roles are required, but may be part time, can be combined, and may not be necessary for getting started and for small AI products.',
-  categories: [
+  title: 'How We Deliver',
+  description: 'Four specialized roles working together to deliver AI solutions across governance, product delivery, and data modernization.',
+  roles: [
     {
-      id: 'functional',
-      title: 'Functional Roles',
-      description: 'Translating strategic objectives into practical, AI-driven decisions and managing day-to-day operations',
-      roles: [
-        {
-          title: 'Engagement Lead',
-          items: [
-            'Primary point of contact between the delivery team and client stakeholders',
-            'Oversees project scope, timelines, and resource allocation across workstreams'
-          ]
-        },
-        {
-          title: 'Data Architect',
-          items: [
-            'Integrated Data Sources and those with common ETL Patterns or canonical features need to be architected together',
-            'Value and Feedback often integrate Profile and Transaction Data and may require an architect'
-          ]
-        },
-        {
-          title: 'Lead Data Engineer',
-          items: [
-            'Transactional, Event and Batch ETL Expertise',
-            'Connects Product Management to Technical Management'
-          ]
-        },
-        {
-          title: 'Tech Lead',
-          items: [
-            'Enables Day to Day Technical Management to be separated from Product Management',
-            'Connects Architecture to Engineering'
-          ]
-        }
+      id: 'human-process-designer',
+      title: 'Human Process Designer',
+      iconName: 'PenTool',
+      summary: 'Designs human-centered workflows and ensures AI solutions align with real business processes',
+      details: [
+        'Maps existing business processes and identifies AI transformation opportunities',
+        'Designs human-in-the-loop workflows that balance automation with human oversight',
+        'Creates user journey frameworks that ensure adoption and change readiness',
+        'Validates that AI-driven processes meet compliance and governance standards',
+        'Collaborates with stakeholders to define acceptance criteria and success metrics',
+        'Ensures accessibility and usability across all user personas'
       ]
     },
     {
-      id: 'business',
-      title: 'Business Roles',
-      description: 'Shape AI strategies, defining project goals, and ensuring alignment with customer and business requirements',
-      roles: [
-        {
-          title: 'Product Manager',
-          items: [
-            'Focuses on quarterly / yearly value delivery',
-            'Connects Product Management to Vision',
-            'Connects Product Management to Advanced Analytics'
-          ]
-        },
-        {
-          title: 'Product Owner / Feature Managers',
-          items: [
-            'Primary customer advocate and link between business and technology strategy',
-            'Builds and maintains the team backlog and coordinates dependencies with stakeholders',
-            'Ensures user stories meet acceptance criteria'
-          ]
-        },
-        {
-          title: 'Scrum Master',
-          items: [
-            'Focuses on delivering value every iteration',
-            'Connects Product and Technical Management'
-          ]
-        },
-        {
-          title: 'Business Analyst',
-          items: [
-            'Performs process modeling, requirements gathering, and cost/benefit analysis'
-          ]
-        }
+      id: 'solution-owner',
+      title: 'Solution Owner',
+      iconName: 'Briefcase',
+      summary: 'Owns the product vision and drives delivery priorities across the engagement lifecycle',
+      details: [
+        'Defines and prioritizes the solution roadmap aligned with business outcomes',
+        'Manages stakeholder expectations and communicates progress across workstreams',
+        'Makes trade-off decisions on scope, timeline, and resource allocation',
+        'Ensures delivered solutions meet business acceptance criteria and ROI targets',
+        'Coordinates cross-functional dependencies between architecture, data, and process teams',
+        'Drives continuous improvement through feedback loops and retrospectives'
       ]
     },
     {
-      id: 'technical',
-      title: 'Technical Roles',
-      description: 'Build underlying technologies and infrastructure needed to support AI product objectives',
-      roles: [
-        {
-          title: 'Data Engineers',
-          items: [
-            'Builds data pipelines for various data ingestion patterns',
-            'Ensures data quality and availability to Technical Management'
-          ]
-        },
-        {
-          title: 'Visualization Engineer',
-          items: [
-            'Builds reports to answer specific questions',
-            'Supports ad-hoc analytics and one-time data pulls'
-          ]
-        },
-        {
-          title: 'Platform & Reliability Engineers',
-          items: [
-            'Ensures data platforms are accessible to AI product teams',
-            'Ensures production systems are free from errors'
-          ]
-        },
-        {
-          title: 'Data Analyst',
-          items: [
-            'Performs data mining, data cleansing, data interpretation, and data visualization tasks'
-          ]
-        }
+      id: 'ai-architect',
+      title: 'AI Architect',
+      iconName: 'Cpu',
+      summary: 'Designs the AI solution architecture and ensures technical excellence across the platform',
+      details: [
+        'Defines the end-to-end AI solution architecture including model selection and orchestration',
+        'Designs agentic workflows and multi-model pipelines for complex business problems',
+        'Establishes technical standards for prompt engineering, fine-tuning, and evaluation',
+        'Ensures solutions meet enterprise security, scalability, and performance requirements',
+        'Evaluates and integrates emerging AI capabilities and platform features',
+        'Creates technical specifications that bridge business requirements to implementation'
       ]
+    },
+    {
+      id: 'integration-architect',
+      title: 'Integration Architect',
+      iconName: 'Cable',
+      summary: 'Connects AI solutions to enterprise systems, data sources, and deployment environments',
+      details: [
+        'Designs integration patterns between AI solutions and enterprise data platforms',
+        'Architects API layers, event-driven pipelines, and data connectivity frameworks',
+        'Ensures secure data flow across cloud environments (AWS, GCP, Azure)',
+        'Manages deployment pipelines through Koyeb and enterprise CI/CD processes',
+        'Validates data quality, schema compatibility, and transformation logic',
+        'Implements monitoring, observability, and automated health checks across integrations'
+      ]
+    }
+  ],
+  offerings: [
+    {
+      id: 'ai-governance',
+      title: 'AI Governance',
+      iconName: 'ShieldCheck',
+      summary: 'Enterprise AI governance, strategy, and change management at scale',
+      details: [
+        'AI strategy development aligned with enterprise business objectives and regulatory requirements',
+        'Governance framework design including model risk management and responsible AI practices',
+        'Change management programs that drive AI adoption across business units',
+        'Policy creation for data usage, model deployment, and AI ethics compliance',
+        'Scalable operating models for managing AI initiatives across the organization',
+        'Executive reporting and KPI frameworks to measure AI program maturity and impact'
+      ]
+    },
+    {
+      id: 'ai-solution-delivery',
+      title: 'AI Solution Delivery',
+      iconName: 'Rocket',
+      summary: 'End-to-end AI product and technology delivery using agentic development',
+      details: [
+        'Full-lifecycle AI product delivery from design through production deployment',
+        'Agentic application development leveraging CompassX AI build capabilities',
+        'Enterprise-grade solution architecture with identity, security, and data integration',
+        'Rapid prototyping and iterative delivery with continuous stakeholder validation',
+        'Multi-cloud deployment across AWS, GCP, and Azure environments',
+        'Production support, monitoring, and continuous enhancement cycles'
+      ]
+    },
+    {
+      id: 'ai-data-modernization',
+      title: 'AI Data Modernization',
+      iconName: 'Database',
+      summary: 'Data platform modernization powered by agentic processes and automation',
+      details: [
+        'Legacy data platform assessment and modernization roadmap development',
+        'Agentic data pipeline construction for automated ETL, ELT, and streaming workflows',
+        'Cloud data platform migration across Databricks, Snowflake, and enterprise data warehouses',
+        'Data quality automation using AI-driven profiling, cleansing, and validation',
+        'Modern data mesh and data product architectures for scalable self-service analytics',
+        'Automated data governance, cataloging, and lineage tracking implementation'
+      ]
+    }
+  ]
+};
+
+export const partnershipsData = {
+  title: 'Delivery Partnerships',
+  description: 'We partner with industry-leading platforms to deliver enterprise AI solutions with best-in-class tooling and infrastructure.',
+  partners: [
+    {
+      id: 'emergent',
+      name: 'Emergent',
+      description: 'Agentic AI development platform powering rapid application construction and delivery',
+      iconName: 'Zap'
+    },
+    {
+      id: 'figma',
+      name: 'Figma',
+      description: 'Collaborative design platform for human experience design and interactive prototyping',
+      iconName: 'PenTool'
+    },
+    {
+      id: 'koyeb',
+      name: 'Koyeb',
+      description: 'CI/CD automated agent pipeline for seamless multi-cloud deployment and scaling',
+      iconName: 'GitPullRequest'
+    },
+    {
+      id: 'databricks',
+      name: 'Databricks',
+      description: 'Unified analytics and AI platform for large-scale data engineering and machine learning',
+      iconName: 'Activity'
+    },
+    {
+      id: 'snowflake',
+      name: 'Snowflake',
+      description: 'Cloud data platform for secure data warehousing, sharing, and analytics at scale',
+      iconName: 'Database'
     }
   ]
 };

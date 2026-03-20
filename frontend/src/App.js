@@ -9,6 +9,7 @@ import { ReleasePipeline } from "./components/landing/ReleasePipeline";
 import { GovernanceModel } from "./components/landing/GovernanceModel";
 import { DeliveryTeam } from "./components/landing/DeliveryTeam";
 import { CostAnalysis } from "./components/landing/CostAnalysis";
+import { Partnerships } from "./components/landing/Partnerships";
 import { ClosingStatement } from "./components/landing/ClosingStatement";
 import { Footer } from "./components/landing/Footer";
 
@@ -28,6 +29,7 @@ function App() {
         <GovernanceModel />
         <DeliveryTeam />
         <CostAnalysis />
+        <Partnerships />
         <ClosingStatement />
       </main>
       <Footer />
