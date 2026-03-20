@@ -7,16 +7,36 @@ const navLinks = [
   { label: 'Architecture', href: '#architecture' },
   { label: 'Pipeline', href: '#pipeline' },
   { label: 'Governance', href: '#governance' },
+  { label: 'Team', href: '#team' },
+  { label: 'Cost', href: '#cost' },
+  { label: 'Partners', href: '#partnerships' },
 ];
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      const sections = navLinks.map(l => l.href.slice(1));
+      let current = '';
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 120) current = id;
+      }
+      setActiveSection(current);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleClick = (e, href) => {
+    e.preventDefault();
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   return (
     <nav
@@ -39,13 +59,19 @@ export const Navbar = () => {
             </span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[13px] font-medium text-slate-500 hover:text-sky-500 tracking-wide uppercase font-mono"
+                onClick={(e) => handleClick(e, link.href)}
+                className={`text-[12px] font-medium tracking-wide uppercase font-mono ${
+                  activeSection === link.href.slice(1)
+                    ? 'text-sky-500'
+                    : 'text-slate-500 hover:text-sky-500'
+                }`}
                 style={{ transition: 'color 0.2s ease' }}
+                data-testid={`nav-link-${link.href.slice(1)}`}
               >
                 {link.label}
               </a>
